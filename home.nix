@@ -1,0 +1,64 @@
+# ~/.config/home-manager/home.nix
+{ config, pkgs, lib, ... }:
+
+{
+  # Home Manager needs a bit of information about you and the
+  # paths it should manage.
+  home.username = "ab_dullah"; # Replace with your username
+  home.homeDirectory = "/home/ab_dullah"; # Replace with your home path
+
+  # This value determines the Home Manager release that your
+  # configuration is compatible with. This helps avoid breakage
+  # when updating Home Manager. Use the version you chose in flake.nix.
+  # It's recommended to leave this unchanged and instead bump it manually
+  # periodically after confirming compatibility.
+  home.stateVersion = "24.11"; # Set this to the version you're using
+
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
+
+  # Add some packages to your user profile
+  home.packages = [
+    # pkgs.git       # Version control
+    pkgs.neovim    # Text editor
+    pkgs.ripgrep   # Fast search tool
+    pkgs.fd        # Fast find alternative
+    pkgs.btop      # Resource monitor
+    pkgs.hello     # Simple test package
+  ];
+
+  # Basic shell configuration example (can be expanded significantly)
+  programs.bash = {
+    enable = true;
+    # You can add aliases, functions, etc. here
+    # bashrcExtra = ''
+    #   export EDITOR=nvim
+    # '';
+  };
+
+  # Enable Starship prompt (optional example)
+  # programs.starship = {
+  #   enable = true;
+  #   # Add custom configuration here if needed
+  # };
+
+  # Manage dotfiles (example)
+  # home.file.".config/nvim/init.vim".text = ''
+  #   set number
+  #   set relativenumber
+  # '';
+
+
+  # Systemd user services (example)
+  # systemd.user.services.my-service = {
+  #   Unit = {
+  #     Description = "My awesome user service";
+  #   };
+  #   Service = {
+  #     ExecStart = "${pkgs.coreutils}/bin/echo 'Hello from my service!'";
+  #   };
+  #   Install = {
+  #     WantedBy = [ "default.target" ];
+  #   };
+  # };
+}
