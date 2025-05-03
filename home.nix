@@ -18,13 +18,17 @@
   programs.home-manager.enable = true;
 
   # Add some packages to your user profile
-  home.packages = [
+  home.packages = with pkgs; [
     # pkgs.git       # Version control
-    pkgs.neovim    # Text editor
-    pkgs.ripgrep   # Fast search tool
-    pkgs.fd        # Fast find alternative
-    pkgs.btop      # Resource monitor
-    pkgs.hello     # Simple test package
+    neovim    # Text editor
+    ripgrep   # Fast search tool
+    fd        # Fast find alternative
+    btop      # Resource monitor
+    hello     # Simple test package
+    go-task  # Task runner
+    yq        # YAML processor
+    jq       # JSON processor
+    nixfmt
   ];
 
   # Basic shell configuration example (can be expanded significantly)

@@ -1,0 +1,15 @@
+version : '3'
+
+
+
+tasks:
+
+ hm:switch:
+  desc: Switch to the home directory
+  # home-manager switch --flake .#ab_dullah -b backup
+  cmd : home-manager switch --flake .#ab_dullah 
+ 
+ nix:clean:
+  desc: Clean up the Nix store
+  # nix-collect-garbage --delete-older-than 30d
+  cmd : nix-collect-garbage --delete-older-than 30d
