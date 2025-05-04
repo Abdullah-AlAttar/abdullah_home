@@ -11,7 +11,7 @@
     ./programs/starship.nix
     ./programs/yazi.nix
     ./programs/atuin.nix
-    ./programs/nixvim.nix
+    # ./programs/nixvim.nix
   ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
