@@ -18,16 +18,16 @@
         file = "./share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
         src = pkgs.zsh-vi-mode;
       }
-      {
-        file = "powerlevel10k.zsh-theme";
-        name = "powerlevel10k";
-        src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
-      }
-      {
-        file = "p10k.zsh";
-        name = "powerlevel10k-config";
-        src = pkgs.zsh-powerlevel10k;
-      }
+      # {
+      #   file = "powerlevel10k.zsh-theme";
+      #   name = "powerlevel10k";
+      #   src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
+      # }
+      # {
+      #   file = "p10k.zsh";
+      #   name = "powerlevel10k-config";
+      #   src = pkgs.zsh-powerlevel10k;
+      # }
     ];
     oh-my-zsh = {
       enable = true;
@@ -130,9 +130,9 @@
     #   unset RPS1 RPROMPT
     # '';
     # '' + lib.readFile ./kubectl_aliases.sh;
-    initExtra = ''
-      [[ ! -f ${./config/p10k.zsh} ]] || source ${./config/p10k.zsh}
-    '';
+    # initExtra = ''
+    #   [[ ! -f ${./config/p10k.zsh} ]] || source ${./config/p10k.zsh}
+    # '';
 
   };
 }

@@ -8,6 +8,7 @@
     ./programs/zoxide.nix
     ./programs/neofetch.nix
     ./programs/kubernetes.nix
+    ./programs/starship.nix
   ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -61,12 +62,7 @@
 
   # Keep your existing programs section
 
-  # ...existing code...
-  # Enable Starship prompt (optional example)
-  # programs.starship = {
-  #   enable = true;
-  #   # Add custom configuration here if needed
-  # };
+ 
 
   # Manage dotfiles (example)
   # home.file.".config/nvim/init.vim".text = ''
