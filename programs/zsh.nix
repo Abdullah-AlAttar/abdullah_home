@@ -4,9 +4,10 @@
   programs.zsh = {
     enable = true;
 
-    enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
+
+    syntaxHighlighting.enable = true;
     enableCompletion = true;
+    autosuggestion.enable = true;
 
     dotDir = ".config/zsh";
 
@@ -20,7 +21,7 @@
       {
         file = "powerlevel10k.zsh-theme";
         name = "powerlevel10k";
-        src = "${zsh-powerlevel10k}/share/zsh-powerlevel10k";
+        src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
       }
       {
         file = "p10k.zsh";
@@ -31,7 +32,6 @@
     oh-my-zsh = {
       enable = true;
       # theme = "robbyrussell";
-      theme = "powerline10k/powerlevel10k";
       plugins = [ "git" ];
       # plugins = with pkgs; [
       #   zsh-autosuggestions

@@ -39,6 +39,7 @@
     nixfmt-classic
     tree 
     eza
+    zsh-powerlevel10k
   ];
 
   # Basic shell configuration example (can be expanded significantly)
