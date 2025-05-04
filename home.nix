@@ -11,6 +11,7 @@
     ./programs/starship.nix
     ./programs/yazi.nix
     ./programs/atuin.nix
+    ./programs/nixvim.nix
   ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -62,8 +63,6 @@
 
   # Keep your existing programs section
 
- 
-
   # Manage dotfiles (example)
   # home.file.".config/nvim/init.vim".text = ''
   #   set number
@@ -81,6 +80,13 @@
   #   Install = {
   #     WantedBy = [ "default.target" ];
   #   };
+  # };
+
+  # programs.nixvim = {
+  #   enable = true;
+
+  #   colorschemes.catppuccin.enable = true;
+  #   plugins.lualine.enable = true;
   # };
 
 }
