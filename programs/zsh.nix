@@ -4,6 +4,7 @@
   programs.zsh = {
     enable = true;
 
+    home.packages = with pkgs; [ zsh-powerlevel10k ];
 
     syntaxHighlighting.enable = true;
     enableCompletion = true;
@@ -92,6 +93,7 @@
         "export ZSH_RELOADING_SHELL=1; source $ZDOTDIR/.zshenv; source $ZDOTDIR/.zshrc; unset ZSH_RELOADING_SHELL";
       t = "task";
       tg = "task -g";
+      cd = "z";
     };
 
     # profileExtra = ''
@@ -130,7 +132,6 @@
     # '' + lib.readFile ./kubectl_aliases.sh;
     initExtra = ''
       [[ ! -f ${./config/p10k.zsh} ]] || source ${./config/p10k.zsh}
-      source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
     '';
 
   };

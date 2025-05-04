@@ -37,26 +37,28 @@
     yq # YAML processor
     jq # JSON processor
     nixfmt-classic
-    tree 
+    tree
     eza
-    zsh-powerlevel10k
+
   ];
 
   # Basic shell configuration example (can be expanded significantly)
   programs.bash = {
     enable = true;
     # You can add aliases, functions, etc. here
-    # bashrcExtra = ''
-    #   export EDITOR=nvim
-    # '';
+    bashrcExtra = ''
+      export EDITOR=nvim
+      export VISUAL=nvim
+      zsh
+    '';
   };
   # programs.fish = {
   #   enable = true;
   #   # Add custom fish configuration here if needed
   # };
-  
+
   # Keep your existing programs section
-  
+
   # ...existing code...
   # Enable Starship prompt (optional example)
   # programs.starship = {
