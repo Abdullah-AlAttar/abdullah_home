@@ -10,6 +10,7 @@
     ./programs/kubernetes.nix
     ./programs/starship.nix
     ./programs/yazi.nix
+    ./programs/atuin.nix
   ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.

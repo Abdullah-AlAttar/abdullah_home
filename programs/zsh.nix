@@ -18,6 +18,11 @@
         file = "./share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
         src = pkgs.zsh-vi-mode;
       }
+      {
+        name = "zsh-history-substring-search";
+        file = "zsh-history-substring-search.zsh";
+        src = pkgs.zsh-history-substring-search;
+      }
       # {
       #   file = "powerlevel10k.zsh-theme";
       #   name = "powerlevel10k";
@@ -125,14 +130,19 @@
     #   source ${pkgs.zsh-completions}/share/zsh-completions/zsh-completions.plugin.zsh
     # '';
 
-    # initExtra = ''
+    initExtra = ''
+      [[ ! -f ${./config/p10k.zsh} ]] || source ${./config/p10k.zsh}
 
-    #   unset RPS1 RPROMPT
-    # '';
-    # '' + lib.readFile ./kubectl_aliases.sh;
-    # initExtra = ''
-    #   [[ ! -f ${./config/p10k.zsh} ]] || source ${./config/p10k.zsh}
-    # '';
+      # Enable history substring search (Fish-like history search)
+      source ${pkgs.zsh-history-substring-search}/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
+      # Bind up/down arrow keys for substring search
+      bindkey '^[[A' history-substring-search-up
+      bindkey '^[[B' history-substring-search-down
+      # For vi mode, also bind in vicmd keymap
+      bindkey -M vicmd '^[[A' history-substring-search-up
+      bindkey -M vicmd '^[[B' history-substring-search-down
+      
+    '';
   };
 }
