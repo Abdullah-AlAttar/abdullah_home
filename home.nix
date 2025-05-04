@@ -2,6 +2,10 @@
 { config, pkgs, lib, ... }:
 
 {
+  imports = [
+    # Include the results of the hardware scan
+    ./programs/zsh.nix
+  ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "ab_dullah"; # Replace with your username
@@ -16,6 +20,8 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  # This is required for using Home Manager with non-NixOS Linux distributions (like WSL)
+  targets.genericLinux.enable = true;
 
   # Add some packages to your user profile
   home.packages = with pkgs; [
@@ -39,7 +45,14 @@
     #   export EDITOR=nvim
     # '';
   };
-
+  # programs.fish = {
+  #   enable = true;
+  #   # Add custom fish configuration here if needed
+  # };
+  
+  # Keep your existing programs section
+  
+  # ...existing code...
   # Enable Starship prompt (optional example)
   # programs.starship = {
   #   enable = true;
@@ -64,4 +77,5 @@
   #     WantedBy = [ "default.target" ];
   #   };
   # };
+
 }
