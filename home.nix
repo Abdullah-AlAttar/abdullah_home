@@ -5,6 +5,8 @@
   imports = [
     # Include the results of the hardware scan
     ./programs/zsh.nix
+    ./programs/zoxide.nix
+    ./programs/neofetch.nix
   ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
