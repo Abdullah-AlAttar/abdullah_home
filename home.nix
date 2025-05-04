@@ -34,7 +34,8 @@
     go-task # Task runner
     yq # YAML processor
     jq # JSON processor
-    nixfmt
+    nixfmt-classic
+    tree 
   ];
 
   # Basic shell configuration example (can be expanded significantly)
