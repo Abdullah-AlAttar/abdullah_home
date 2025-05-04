@@ -2,12 +2,12 @@
 
 {
   home.packages = with pkgs; [
-    kubectl kubie kubetail k9s kubeconform kubeswitch
-    kubespy kubernetes-helm kube-capacity kubent
-     terraform opentofu kubectx
+    kubectl k9s kubectx stern
+    sops
   ];
 
   programs.zsh.initExtra = ''
     source <(kubectl completion zsh)
   '';
+
 }

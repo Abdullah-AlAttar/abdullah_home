@@ -40,6 +40,7 @@
     nixfmt-classic
     tree
     eza
+    yazi
 
   ];
 

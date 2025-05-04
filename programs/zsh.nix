@@ -93,6 +93,7 @@
       t = "task";
       tg = "task -g";
       cd = "z";
+      k = "kubectl";
     };
 
     # profileExtra = ''
