@@ -38,6 +38,7 @@
     jq # JSON processor
     nixfmt-classic
     tree 
+    eza
   ];
 
   # Basic shell configuration example (can be expanded significantly)
