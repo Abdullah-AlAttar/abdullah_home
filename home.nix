@@ -9,6 +9,7 @@
     ./programs/neofetch.nix
     ./programs/kubernetes.nix
     ./programs/starship.nix
+    ./programs/yazi.nix
   ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -41,8 +42,6 @@
     nixfmt-classic
     tree
     eza
-    yazi
-
   ];
 
   # Basic shell configuration example (can be expanded significantly)
