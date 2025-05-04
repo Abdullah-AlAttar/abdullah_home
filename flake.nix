@@ -4,14 +4,16 @@
 
   inputs = {
     # Nixpkgs (stable channel)
-    nixpkgs.url =
-      "github:nixos/nixpkgs/nixos-24.11"; # Or choose a different branch/tag
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     # Or use unstable: nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # Home Manager
     home-manager = {
-      url =
-        "github:nix-community/home-manager/release-24.11"; # Match nixpkgs version
+      url = "github:nix-community/home-manager/release-24.11"; 
+      # url = "github:nix-community/home-manager/archive/master.tar.gz";
+      
+      # url = "github:nix-community/home-manager/archive/master.tar.gz";
       # Or use unstable: url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs"; # Make HM use the same nixpkgs
     };
