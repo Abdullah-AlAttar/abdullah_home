@@ -44,6 +44,18 @@
     nixfmt-classic
     tree
     eza
+
+    # languages
+    ## rust
+    rustc
+    cargo
+
+    ## go
+    go_1_24
+
+    ## cpp
+    gcc
+
   ];
 
   # Basic shell configuration example (can be expanded significantly)
@@ -68,6 +80,9 @@
   #   set number
   #   set relativenumber
   # '';
+
+  # Symlink the entire nvim config directory
+  home.file.".config/nvim".source = ./config/nvim;
 
   # Systemd user services (example)
   # systemd.user.services.my-service = {
