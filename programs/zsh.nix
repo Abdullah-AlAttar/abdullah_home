@@ -125,10 +125,7 @@
     #   source ${pkgs.zsh-completions}/share/zsh-completions/zsh-completions.plugin.zsh
     # '';
 
-    initExtra = ''
-      [[ ! -f ${./config/p10k.zsh} ]] || source ${./config/p10k.zsh}
-      bindkey '^r' _atuin_search_widget
+      initExtra = (builtins.readFile ./scripts/zshInitExtra.sh);
 
-    '';
   };
 }
