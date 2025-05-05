@@ -10,7 +10,7 @@ tasks:
  
  nix:clean:
   desc: Clean up the Nix store
-  cmd : nix-collect-garbage --delete-older-than 30d
+  cmd : nix-collect-garbage -d
 
  nix:update:
   desc: Update Nix packages
