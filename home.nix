@@ -33,7 +33,7 @@
   # Add some packages to your user profile
   home.packages = with pkgs; [
     # pkgs.git       # Version control
-    neovim # Text editor
+    # neovim # Text editor
     ripgrep # Fast search tool
     fd # Fast find alternative
     btop # Resource monitor
@@ -44,6 +44,8 @@
     nixfmt-classic
     tree
     eza
+    unzip
+    zip
 
     # languages
     ## rust
@@ -81,8 +83,13 @@
   #   set relativenumber
   # '';
 
-  # Symlink the entire nvim config directory
+  # Remove or comment out this line:
   home.file.".config/nvim".source = ./config/nvim;
+
+  programs.neovim = {
+    enable = true;
+    # ...existing code...
+  };
 
   # Systemd user services (example)
   # systemd.user.services.my-service = {
