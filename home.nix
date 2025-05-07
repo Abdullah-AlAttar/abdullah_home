@@ -63,7 +63,12 @@
     python314
     uv
 
+
+    ## node
+    nodejs_22
+
   ];
+
 
   # Basic shell configuration example (can be expanded significantly)
   programs.bash = {
@@ -72,40 +77,18 @@
     bashrcExtra = ''
       export EDITOR=nvim
       export VISUAL=nvim
+      export PATH=$HOME/.local/bin:$PATH
+      export PATH=$HOME/.npm-global/bin:$PATH
       zsh
     '';
   };
-  # programs.fish = {
-  #   enable = true;
-  #   # Add custom fish configuration here if needed
-  # };
 
-  # Keep your existing programs section
 
-  # Manage dotfiles (example)
-  # home.file.".config/nvim/init.vim".text = ''
-  #   set number
-  #   set relativenumber
-  # '';
-
-  # Systemd user services (example)
-  # systemd.user.services.my-service = {
-  #   Unit = {
-  #     Description = "My awesome user service";
-  #   };
-  #   Service = {
-  #     ExecStart = "${pkgs.coreutils}/bin/echo 'Hello from my service!'";
-  #   };
-  #   Install = {
-  #     WantedBy = [ "default.target" ];
-  #   };
-  # };
-
-  # programs.nixvim = {
-  #   enable = true;
-
-  #   colorschemes.catppuccin.enable = true;
-  #   plugins.lualine.enable = true;
-  # };
+  # set npm prefix to avoid permission issues
+  # npm set prefix ~/.npm-global
+  # this shit does not work
+  home.sessionPath = [
+    "$HOME/.npm-global/bin"
+  ];
 
 }
