@@ -67,6 +67,9 @@
     ## node
     nodejs_22
 
+
+    ## dev
+    oapi-codegen
   ];
 
 
