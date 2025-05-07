@@ -12,7 +12,9 @@
     ./programs/yazi.nix
     ./programs/atuin.nix
     ./programs/astrovim
-    # ./programs/nixvim.nix
+
+     # languages
+    ./programs/go
   ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -39,7 +41,6 @@
     fd # Fast find alternative
     btop # Resource monitor
     hello # Simple test package
-    go-task # Task runner
     yq # YAML processor
     jq # JSON processor
     nixfmt-classic
@@ -53,8 +54,7 @@
     rustc
     cargo
 
-    ## go
-    go_1_24
+ 
 
     ## cpp
     gcc
