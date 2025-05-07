@@ -9,9 +9,7 @@ in
     go-task
     revive
     temporal-cli
-    gotools.jv
-    gotools.jsonnet
-    gotools.jsonnetfmt
+    # gotools.jv
   ];
 
   home.file."revive.toml".source = ./revive.toml;
