@@ -26,7 +26,5 @@
 
   # How do i make this dynamic? Hardcoded doesn't seem so nice but it's the only way i can make the symlink work.
   # Relevant issue: https://github.com/nix-community/home-manager/issues/3514
-  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink (toString ./nvim);
-# ...existing code...
-  # ...existing code...
+  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink (toString ./astro_template);
 }
