@@ -1,14 +1,18 @@
-{ config, lib, pkgs, ... }: {
-  
+{ config, lib, pkgs, ... }: 
+
+let
+  gotools = import ./gotools.nix { inherit pkgs; };
+in
+{
   home.packages = with pkgs; [
-    # Add your package dependencies here
     go_1_24
     go-task
     revive
     temporal-cli
+    gotools.jv
+    gotools.jsonnet
+    gotools.jsonnetfmt
   ];
-  # create symlink to revive.toml 
-  # in $HOME/revive.toml
 
   home.file."revive.toml".source = ./revive.toml;
 }
