@@ -33,10 +33,10 @@
   #   src = pkgs.fetchFromGitHub {
   #     owner = "google";
   #     repo = "go-jsonnet";
-  #     rev = "v0.20.0";
-  #     # sha256 = "sha256-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB="; # Same as above
+  #     rev = "v0.21.0";
+  #     sha256 = "sha256-J92xNDpCidbiSsN6NveS6BX6Tx+qDQqkgm6pjk1wBTQ="; # Same as above
   #   };
   #   subPackages = [ "cmd/jsonnetfmt" ];
-  #   vendorSha256 = null;
+  #   vendorHash  = null;
   # };
 }

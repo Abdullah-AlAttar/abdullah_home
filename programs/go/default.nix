@@ -10,6 +10,7 @@ in
     revive
     temporal-cli
     # gotools.jv
+    # gotools.jsonnetfmt
   ];
 
   home.file."revive.toml".source = ./revive.toml;
