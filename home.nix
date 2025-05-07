@@ -8,7 +8,7 @@
     ./programs/zoxide.nix
     ./programs/neofetch.nix
     ./programs/kubernetes.nix
-    ./programs/starship.nix
+    ./programs/starship
     ./programs/yazi.nix
     ./programs/atuin.nix
     ./programs/astrovim

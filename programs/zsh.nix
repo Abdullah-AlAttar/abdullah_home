@@ -1,7 +1,6 @@
 { config, pkgs, lib, ... }:
 
 {
-  home.packages = with pkgs; [ zsh-powerlevel10k ];
   programs.zsh = {
     enable = true;
 
@@ -18,32 +17,12 @@
         file = "./share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
         src = pkgs.zsh-vi-mode;
       }
-      # {
-      #   file = "powerlevel10k.zsh-theme";
-      #   name = "powerlevel10k";
-      #   src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
-      # }
-      # {
-      #   file = "p10k.zsh";
-      #   name = "powerlevel10k-config";
-      #   src = pkgs.zsh-powerlevel10k;
-      # }
+
     ];
     oh-my-zsh = {
       enable = true;
       # theme = "robbyrussell";
       plugins = [ "git" ];
-      # plugins = with pkgs; [
-      #   zsh-autosuggestions
-      #   zsh-completions
-      #   zsh-history-substring-search
-      #   zsh-syntax-highlighting
-      #   zsh-vi-mode
-      #   zsh-users/zsh-nvm
-      #   zsh-users/zsh-completions
-      #   zsh-users/zsh-history-substring-search
-      #   zsh-users/zsh-syntax-highlighting
-      # ];
     };
 
     history = {
@@ -60,7 +39,7 @@
     sessionVariables = {
       COLORTERM = "truecolor";
       TERM = "xterm-256color";
-      EDITOR = "vi";
+      EDITOR = "nvim";
       ZVM_VI_ESCAPE_BINDKEY = "kl";
     };
 
@@ -96,36 +75,7 @@
       k = "kubectl";
     };
 
-    # profileExtra = ''
-    #   setopt incappendhistory
-    #   setopt histfindnodups
-    #   setopt histreduceblanks
-    #   setopt histverify
-    #   setopt correct                                                  # Auto correct mistakes
-    #   setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
-    #   setopt nocaseglob                                               # Case insensitive globbing
-    #   setopt rcexpandparam                                            # Array expension with parameters
-    #   #setopt nocheckjobs                                              # Don't warn about running processes when exiting
-    #   setopt numericglobsort                                          # Sort filenames numerically when it makes sense
-    #   unsetopt nobeep                                                 # Enable beep
-    #   setopt appendhistory                                            # Immediately append history instead of overwriting
-    #   unsetopt histignorealldups                                      # If a new command is a duplicate, do not remove the older one
-    #   setopt interactivecomments
-    #   zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
-    #   zstyle ':completion:*' list-colors "''${(s.:.)LS_COLORS}"       # Colored completion (different colors for dirs/files/etc)
-    #   zstyle ':completion:*' rehash true                              # automatically find new executables in path
-    #   # Speed up completions
-    #   zstyle ':completion:*' accept-exact '*(N)'
-    #   zstyle ':completion:*' use-cache on
-    #   mkdir -p "$(dirname ${config.xdg.cacheHome}/zsh/completion-cache)"
-    #   zstyle ':completion:*' cache-path "${config.xdg.cacheHome}/zsh/completion-cache"
-    #   zstyle ':completion:*' menu select
-    #   WORDCHARS=''${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
-    #   source ${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-    #   source ${pkgs.zsh-completions}/share/zsh-completions/zsh-completions.plugin.zsh
-    # '';
-
-      initExtra = (builtins.readFile ./scripts/zshInitExtra.sh);
+    initExtra = (builtins.readFile ./scripts/zshInitExtra.sh);
 
   };
 }
