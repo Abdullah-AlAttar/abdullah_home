@@ -48,6 +48,7 @@
     eza
     unzip
     zip
+    bat
 
     # languages
     ## rust
