@@ -11,6 +11,7 @@
     ./programs/starship.nix
     ./programs/yazi.nix
     ./programs/atuin.nix
+    ./programs/astrovim
     # ./programs/nixvim.nix
   ];
   # Home Manager needs a bit of information about you and the
@@ -58,6 +59,10 @@
     ## cpp
     gcc
 
+    ## python
+    python314
+    uv
+
   ];
 
   # Basic shell configuration example (can be expanded significantly)
@@ -82,14 +87,6 @@
   #   set number
   #   set relativenumber
   # '';
-
-  # Remove or comment out this line:
-  home.file.".config/nvim".source = ./config/nvim;
-
-  programs.neovim = {
-    enable = true;
-    # ...existing code...
-  };
 
   # Systemd user services (example)
   # systemd.user.services.my-service = {
