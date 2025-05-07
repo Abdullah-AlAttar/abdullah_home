@@ -5,6 +5,7 @@
     go_1_24
     go-task
     revive
+    temporal-cli
   ];
   # create symlink to revive.toml 
   # in $HOME/revive.toml
