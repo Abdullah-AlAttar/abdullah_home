@@ -9,6 +9,7 @@ in
     go-task
     revive
     temporal-cli
+    process-compose
     # gotools.jv
     # gotools.jsonnetfmt
   ];
