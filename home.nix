@@ -10,7 +10,7 @@
     ./programs/kubernetes.nix
     ./programs/starship
     ./programs/yazi.nix
-    ./programs/atuin.nix
+    ./programs/atuin
     ./programs/astrovim
 
      # languages
