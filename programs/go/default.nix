@@ -13,6 +13,9 @@ in
     process-compose
     # gotools.jv
     # gotools.jsonnetfmt
+    sqlc
+    go-migrate
+    oapi-codegen
   ];
 
   home.file."revive.toml".source = ./revive.toml;
