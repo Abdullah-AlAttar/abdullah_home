@@ -73,6 +73,7 @@
       tg = "task -g";
       cd = "z";
       k = "kubectl";
+      cat = "${pkgs.bat}/bin/bat --paging=never";
     };
 
     # initExtra = (builtins.readFile ./scripts/zshInitExtra.sh);
