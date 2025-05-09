@@ -6,7 +6,7 @@
     sops
   ];
 
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     source <(kubectl completion zsh)
   '';
 

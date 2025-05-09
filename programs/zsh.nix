@@ -75,7 +75,8 @@
       k = "kubectl";
     };
 
-    initExtra = (builtins.readFile ./scripts/zshInitExtra.sh);
+    # initExtra = (builtins.readFile ./scripts/zshInitExtra.sh);
+    initContent = (builtins.readFile ./scripts/zshInitExtra.sh);
 
   };
 }

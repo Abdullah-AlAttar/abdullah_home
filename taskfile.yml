@@ -15,7 +15,9 @@ tasks:
  nix:update:
   desc: Update Nix packages
   cmd : nix-env -u '*'
-
+ flake:update:
+  desc: Update Nix flake inputs
+  cmd : nix flake update
  npm:set-prefix:
   desc: Set npm prefix to local, to avoid permission issues 
   cmd : npm config set prefix ~/.npm-global
