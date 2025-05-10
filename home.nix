@@ -13,6 +13,7 @@
     ./programs/atuin
     ./programs/astrovim
 
+    ./programs/helix
      # languages
     ./programs/go
   ];
@@ -72,6 +73,7 @@
 
     ## dev
     oapi-codegen
+
   ];
 
 
