@@ -49,6 +49,7 @@
     unzip
     zip
     bat
+    graphviz
 
     # languages
     ## rust
