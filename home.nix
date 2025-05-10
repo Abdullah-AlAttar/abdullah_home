@@ -43,13 +43,13 @@
     hello # Simple test package
     yq # YAML processor
     jq # JSON processor
-    nixfmt-classic
-    tree
-    eza
-    unzip
-    zip
-    bat
-    graphviz
+    nixfmt-classic # Nix formatter
+    eza # ls replacement
+    unzip # Unzip files
+    zip # Zip files
+    bat # Cat replacement
+    graphviz # Graph visualization software
+    dysk # Disk usage analyzer
 
     # languages
     ## rust
