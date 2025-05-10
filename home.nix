@@ -1,5 +1,5 @@
 # ~/.config/home-manager/home.nix
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, username, ... }:
 
 {
   imports = [
@@ -18,8 +18,8 @@
   ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "ab_dullah"; # Replace with your username
-  home.homeDirectory = "/home/ab_dullah"; # Replace with your home path
+  home.username = username; # Replace with your username
+  home.homeDirectory = "/home/${username}"; # Replace with your home path
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage

@@ -41,7 +41,7 @@
           ];
 
           # Optional: Extra arguments passed to your modules
-          # extraSpecialArgs = { inherit inputs; };
+          extraSpecialArgs = { inherit username; };
         };
     };
 }
