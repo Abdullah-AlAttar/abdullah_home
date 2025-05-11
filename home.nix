@@ -4,18 +4,17 @@
 {
   imports = [
     # Include the results of the hardware scan
-    ./programs/zsh.nix
+    ./programs/zsh
+    ./programs/atuin
+    ./programs/starship
+    ./programs/helix
+    ./programs/go
+    ./programs/astrovim
+
     ./programs/zoxide.nix
     ./programs/neofetch.nix
     ./programs/kubernetes.nix
-    ./programs/starship
     ./programs/yazi.nix
-    ./programs/atuin
-    ./programs/astrovim
-
-    ./programs/helix
-     # languages
-    ./programs/go
     ./programs/eza.nix
     ./programs/zellij.nix
     ./programs/fzf.nix

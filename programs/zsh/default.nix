@@ -78,8 +78,7 @@
       cat = "${pkgs.bat}/bin/bat --paging=never";
     };
 
-    # initExtra = (builtins.readFile ./scripts/zshInitExtra.sh);
-    initContent = (builtins.readFile ./scripts/zshInitExtra.sh);
+    initContent = (builtins.readFile ./zshInitExtra.sh);
 
   };
 }
