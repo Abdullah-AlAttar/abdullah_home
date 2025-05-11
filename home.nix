@@ -75,6 +75,7 @@
 
     ## dev
     oapi-codegen
+    glab
 
   ];
 

@@ -11,11 +11,15 @@ probably
 sh <(curl -L https://nixos.org/nix/install) --daemon
 ```
 
-say yes to all prompts   
+say yes to all prompts, then  
+```bash
 # This must be sourced in your .profile or whatever shell you're using.
 # In the future we can get home-manager to do this for us, but bootstrapping for now...
 source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+```
+
 Then add `experimental-features = nix-command flakes` to `/etc/nix/nix.conf`
+
 
 
 ### install `home-manager` from [the official site](https://nix-community.github.io/home-manager/index.xhtml#ch-installation), make sure to do the Standalone installation
