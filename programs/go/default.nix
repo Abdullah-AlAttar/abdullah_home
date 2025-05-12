@@ -22,6 +22,7 @@ in {
     sqlc
     go-migrate
     oapi-codegen
+    kaf
   ];
 
   home.file."revive.toml".source = ./revive.toml;
