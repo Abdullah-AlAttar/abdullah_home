@@ -80,19 +80,6 @@
   ];
 
 
-  # Basic shell configuration example (can be expanded significantly)
-  programs.bash = {
-    enable = true;
-    # You can add aliases, functions, etc. here
-    bashrcExtra = ''
-      export EDITOR=nvim
-      export VISUAL=nvim
-      export PATH=$HOME/.local/bin:$PATH
-      export PATH=$HOME/.npm-global/bin:$PATH
-      export PATH=$HOME/go/bin:$PATH
-      zsh
-    '';
-  };
 
 
   # set npm prefix to avoid permission issues
