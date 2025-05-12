@@ -47,13 +47,6 @@
 
     shellAliases = rec {
       ".." = "cd ..";
-      # ls =
-      #   "${pkgs.eza}/bin/exa --color=auto --group-directories-first --classify";
-      # lst = "${ls} --tree";
-      # la = "${ls} --all";
-      # ll = "${ls} --all --long --header --group";
-      # llt = "${ll} --tree";
-      # tree = "${ls} --tree";
       cdtemp = "cd `mktemp -d`";
       cp = "cp -iv";
       ln = "ln -v";
@@ -78,7 +71,7 @@
       cat = "${pkgs.bat}/bin/bat --paging=never";
     };
 
-    initContent = (builtins.readFile ./zshInitExtra.sh);
+    initContent = (builtins.readFile ./zshInitContent.sh);
 
   };
 }

@@ -6,7 +6,7 @@
     enable = true;
     # You can add aliases, functions, etc. here
     # bashrcExtra = "";
-    initContent = (builtins.readFile ./bashInitExtra.sh);
+    initContent = (builtins.readFile ./bashInitContent.sh);
   };
 
 }
