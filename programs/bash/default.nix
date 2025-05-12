@@ -5,7 +5,7 @@
   programs.bash = {
     enable = true;
     # You can add aliases, functions, etc. here
-    bashrcExtra = "\n";
+    # bashrcExtra = "";
     initContent = (builtins.readFile ./bashInitExtra.sh);
   };
 
