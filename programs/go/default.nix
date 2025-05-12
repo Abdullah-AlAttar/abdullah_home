@@ -20,7 +20,6 @@ in {
     # gotools.jv
     # gotools.jsonnetfmt
     sqlc
-    go-migrate
     oapi-codegen
     kaf
   ];
