@@ -10,6 +10,7 @@
     ./programs/helix
     ./programs/go
     ./programs/astrovim
+    ./programs/bash
 
     ./programs/zoxide.nix
     ./programs/neofetch.nix
