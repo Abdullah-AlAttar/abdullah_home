@@ -75,6 +75,7 @@
 
     ## dev
     glab
+    postgresql
 
   ];
 
