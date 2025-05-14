@@ -19,6 +19,7 @@
     ./programs/eza.nix
     ./programs/zellij.nix
     ./programs/fzf.nix
+    ./programs/bottom.nix
   ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -53,6 +54,7 @@
     bat # Cat replacement
     graphviz # Graph visualization software
     dysk # Disk usage analyzer
+    yt-dlp # YouTube downloader
 
     # languages
     ## rust
