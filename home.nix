@@ -48,7 +48,6 @@
     yq # YAML processor
     jq # JSON processor
     nixfmt-classic # Nix formatter
-    eza # ls replacement
     unzip # Unzip files
     zip # Zip files
     bat # Cat replacement
@@ -78,6 +77,11 @@
     postgresql
     buf
 
+
+    ## network
+    lsof
+    nettools
+    iproute2
   ];
 
 
