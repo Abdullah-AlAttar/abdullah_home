@@ -22,8 +22,12 @@ in {
     sqlc
     oapi-codegen
     kaf
+    gopls
+    delve
   ];
 
   home.file."revive.toml".source = ./revive.toml;
+
+
 
 }

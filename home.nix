@@ -81,13 +81,12 @@
 
 
     ## network
-    lsof
-    nettools
-    iproute2
+    # lsof
+    # nettools
+    # iproute2
   ];
 
-
-
+  # Add a script to install Go tools during activation
 
   # set npm prefix to avoid permission issues
   # npm set prefix ~/.npm-global

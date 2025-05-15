@@ -1,18 +1,19 @@
 { pkgs }:
 
 {
-  # jv = pkgs.buildGoModule {
-  #   pname = "jv";
-  #   version = "latest";
-  #   src = pkgs.fetchFromGitHub {
-  #     owner = "santhosh-tekuri";
-  #     repo = "jsonschema";
-  #     rev = "v1.4.0"; # Use the latest tag or commit hash
-  #     # sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="; # Replace with actual hash
-  #   };
-  #   subPackages = [ "cmd/jv" ];
-  #   vendorSha256 = null;
-  # };
+  jv = pkgs.buildGoModule rec {
+    pname = "jv";
+    version = "v6.0.1";
+    src = pkgs.fetchFromGitHub {
+      owner = "santhosh-tekuri";
+      repo = "jsonschema";
+      rev = version; 
+      sha256 = "sha256-/scpmnDB6EgJHWLYImwdiCOcwQw0k+jnTQ4Ml8pYARk="; # placeholder, replace with actual
+    };
+    subPackages = [ "cmd/jv" ];
+    vendorHash =  null;
+    
+  };
 
   # jsonnet = pkgs.buildGoModule {
   #   pname = "jsonnet";
