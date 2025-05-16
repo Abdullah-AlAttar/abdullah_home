@@ -68,6 +68,7 @@
       tg = "task -g";
       cd = "z";
       k = "kubectl";
+      kc = "kubecolor";
       cat = "${pkgs.bat}/bin/bat --paging=never";
     };
 

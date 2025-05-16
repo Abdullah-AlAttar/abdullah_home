@@ -9,16 +9,34 @@
         ui = {
           headless = false;
           logoless = true;
-          skin = "catppuccin-mocha-transparent";
-          # skin = "dracula";
+          skin = "catppuccin-macchiato-transparent";
+          # skin = "dracula";   
+         
         };
+        logger = { fullScreen = false; };
       };
     };
+
+    plugin = import ./plugins.nix;
+
     skins = {
-      catppuccin-mocha-transparent =
-        builtins.fromJSON (builtins.readFile  ./catppuccin-mocha-transparent.json);
-      dracula =
-        builtins.fromJSON (builtins.readFile  ./dracula.json);
+      dracula = builtins.fromJSON (builtins.readFile ./skins/dracula.json);
+      catppuccin-mocha-transparent = builtins.fromJSON
+        (builtins.readFile ./skins/catppuccin-mocha-transparent.json);
+      catppuccin-frappe-transparent = builtins.fromJSON
+        (builtins.readFile ./skins/catppuccin-frappe-transparent.json);
+      catppuccin-latte-transparent = builtins.fromJSON
+        (builtins.readFile ./skins/catppuccin-latte-transparent.json);
+      catppuccin-macchiato-transparent = builtins.fromJSON
+        (builtins.readFile ./skins/catppuccin-macchiato-transparent.json);
+      catppuccin-macchiato = builtins.fromJSON  
+        (builtins.readFile ./skins/catppuccin-macchiato.json);
+      catppuccin-frappe = builtins.fromJSON
+        (builtins.readFile ./skins/catppuccin-frappe.json);
+      catppuccin-latte = builtins.fromJSON
+        (builtins.readFile ./skins/catppuccin-latte.json);
+      catppuccin-mocha = builtins.fromJSON
+        (builtins.readFile ./skins/catppuccin-mocha.json);
     };
   };
 }

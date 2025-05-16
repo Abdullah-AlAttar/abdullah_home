@@ -47,7 +47,7 @@
     fd # Fast find alternative
     btop # Resource monitor
     hello # Simple test package
-    yq # YAML processor
+    yq-go # YAML processor
     jq # JSON processor
     nixfmt-classic # Nix formatter
     unzip # Unzip files
