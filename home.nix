@@ -11,6 +11,7 @@
     ./programs/go
     ./programs/astrovim
     ./programs/bash
+    ./programs/k9s
 
     ./programs/zoxide.nix
     ./programs/neofetch.nix
@@ -81,9 +82,9 @@
 
 
     ## network
-    # lsof
-    # nettools
-    # iproute2
+    lsof
+    nettools
+    iproute2
   ];
 
   # Add a script to install Go tools during activation
