@@ -57,6 +57,7 @@
     dysk # Disk usage analyzer
     yt-dlp # YouTube downloader
 
+    jnv
     # languages
     ## rust
     rustc

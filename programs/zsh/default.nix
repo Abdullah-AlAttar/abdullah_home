@@ -33,7 +33,7 @@
       ignoreSpace = true;
       extended = true;
       path = "${config.xdg.dataHome}/zsh/history";
-      share = false;
+      share = true;
       size = 100000;
       save = 100000;
     };
