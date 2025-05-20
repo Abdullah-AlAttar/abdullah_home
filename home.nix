@@ -58,6 +58,7 @@
     yt-dlp # YouTube downloader
 
     jnv
+    fx
     # languages
     ## rust
     rustc
