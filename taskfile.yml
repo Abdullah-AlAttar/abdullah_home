@@ -1,27 +1,22 @@
-version : '3'
-
-
+version: "3"
 
 tasks:
+  hm:switch:
+    desc: Switch to the home directory
+    cmd: home-manager switch --flake .#ab_dullah
 
- hm:switch:
-  desc: Switch to the home directory
-  cmd : home-manager switch --flake .#ab_dullah 
- 
- nix:clean:
-  desc: Clean up the Nix store
-  cmd : nix-collect-garbage -d
+  nix:clean:
+    desc: Clean up the Nix store
+    cmd: nix-collect-garbage -d
 
- nix:update:
-  desc: Update Nix packages
-  cmd : nix-env -u '*'
- flake:update:
-  desc: Update Nix flake inputs
-  cmd : nix flake update
- npm:set-prefix:
-  desc: Set npm prefix to local, to avoid permission issues 
-  cmd : npm config set prefix ~/.npm-global
+  flake:update:
+    desc: Update Nix flake inputs
+    cmd: nix flake update
 
- astrovim:sync:
-  desc: Copy AstroVim lockfile
-  cmd: cp ~/.config/nvim/lazy-lock.json ./programs/astrovim/astro_template/lazy-lock.json
+  npm:set-prefix:
+    desc: Set npm prefix to local, to avoid permission issues
+    cmd: npm config set prefix ~/.npm-global
+
+  astrovim:sync:
+    desc: Copy AstroVim lockfile
+    cmd: cp ~/.config/nvim/lazy-lock.json ./programs/astrovim/astro_template/lazy-lock.json
