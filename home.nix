@@ -56,6 +56,8 @@
     graphviz # Graph visualization software
     dysk # Disk usage analyzer
     yt-dlp # YouTube downloader
+    typst
+    fontconfig
 
     jnv
     fx
