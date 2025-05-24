@@ -58,6 +58,8 @@
     yt-dlp # YouTube downloader
     typst
     fontconfig
+    xh
+    tokei
 
     jnv
     fx
@@ -65,6 +67,7 @@
     ## rust
     rustc
     cargo
+    
 
  
 
