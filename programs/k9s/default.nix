@@ -10,8 +10,6 @@
           headless = false;
           logoless = true;
           skin = "catppuccin-macchiato-transparent";
-          # skin = "dracula";   
-
         };
         logger = { fullScreen = false; };
       };
