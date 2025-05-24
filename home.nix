@@ -9,7 +9,7 @@
     ./programs/starship
     ./programs/helix
     ./programs/go
-    ./programs/astrovim
+    # ./programs/astrovim
     ./programs/bash
     ./programs/k9s
 
@@ -21,6 +21,7 @@
     ./programs/zellij.nix
     ./programs/fzf.nix
     ./programs/bottom.nix
+    ./programs/nvchad
   ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -39,6 +40,8 @@
   # This is required for using Home Manager with non-NixOS Linux distributions (like WSL)
   targets.genericLinux.enable = true;
 
+
+
   # Add some packages to your user profile
   home.packages = with pkgs; [
     # pkgs.git       # Version control
@@ -50,6 +53,7 @@
     yq-go # YAML processor
     jq # JSON processor
     nixfmt-classic # Nix formatter
+    nil # Nix language server
     unzip # Unzip files
     zip # Zip files
     bat # Cat replacement
@@ -67,7 +71,7 @@
     ## rust
     rustc
     cargo
-    
+  
 
  
 
@@ -77,6 +81,7 @@
     ## python
     python314
     uv
+    pyright # Python language server
 
 
     ## node

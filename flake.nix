@@ -18,10 +18,15 @@
       # url = "github:nix-community/home-manager/archive/master.tar.gz";
       # Or use unstable: url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs"; # Make HM use the same nixpkgs
+
+    };
+    nix4nvchad = {
+      url = "github:nix-community/nix4nvchad";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, catppuccin, nix4nvchad, ... }@inputs:
     let
       # Replace <username> with your actual Linux username
       username = "ab_dullah";
@@ -41,6 +46,7 @@
             ./home.nix
             # You can add more modules here later if you split your config
             catppuccin.homeModules.catppuccin
+            nix4nvchad.homeManagerModule
           ];
 
           # Optional: Extra arguments passed to your modules
