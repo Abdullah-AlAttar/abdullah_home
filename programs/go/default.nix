@@ -24,6 +24,7 @@ in {
     kaf
     gopls
     delve
+    govulncheck
   ];
 
   home.file."revive.toml".source = ./revive.toml;
