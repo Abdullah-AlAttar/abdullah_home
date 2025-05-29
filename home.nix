@@ -93,6 +93,9 @@
     lsof
     nettools
     iproute2
+
+    # idk
+    hugo
   ];
 
   # Add a script to install Go tools during activation
