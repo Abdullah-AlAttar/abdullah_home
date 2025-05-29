@@ -5,6 +5,7 @@
   imports = [
     # Include the results of the hardware scan
     ./programs/zsh
+    # ./programs/nu
     ./programs/atuin
     ./programs/starship
     ./programs/helix
