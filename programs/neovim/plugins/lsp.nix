@@ -35,6 +35,7 @@
           clangd.enable = true;
           texlab.enable = true; # inria
           gopls.enable = true;
+
         };
       };
     };

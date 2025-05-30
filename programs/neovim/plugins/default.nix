@@ -14,11 +14,13 @@
     ./telescope.nix # Fuzzy finder for Neovim
     ./treesitter.nix # Syntax highlighting and code parsing
     # ./vimtex.nix # inria
+    ./which-key.nix # Shows available keybindings
   ];
 
   programs.nixvim = {
     # colorschemes.gruvbox.enable = true;
     colorschemes.vscode.enable = true;
+    # colorschemes.bluloco.enable = true;
 
     plugins = {
       # Lazy loading

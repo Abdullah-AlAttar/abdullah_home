@@ -15,6 +15,14 @@
     };
 
     opts = {
+      list = true; # Show whitespace characters
+      listchars = {
+        tab = "▸ "; # Show tabs as a right-pointing arrow
+        trail = "·"; # Show trailing spaces as a dot
+        extends = "›"; # Show lines that extend beyond the right edge
+        precedes = "‹"; # Show lines that extend beyond the left edge
+        nbsp = "␣"; # Show non-breaking spaces as a special character
+      };
       updatetime = 100; # Faster completion
 
       # Line numbers
@@ -58,6 +66,9 @@
 
       # Folding
       foldlevel = 99; # Folds with a level higher than this number will be closed
+
+      # Cursor style
+      guicursor = "n-v-c:block-blinkwait700-blinkoff400-blinkon250,i-ci-ve:ver25-blinkwait700-blinkoff400-blinkon250"; # Blinking cursor
     };
   };
 }

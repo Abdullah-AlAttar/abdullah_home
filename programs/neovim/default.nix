@@ -22,7 +22,7 @@
         enable = true;
         standalonePlugins = [
           "hmts.nvim"
-          "neorg"
+          # "neorg"
           "nvim-treesitter"
         ];
       };
