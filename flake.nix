@@ -19,6 +19,11 @@
       # Or use unstable: url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs"; # Make HM use the same nixpkgs
     };
+    nixvim = {
+       url = "github:nix-community/nixvim";
+        # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, catppuccin, ... }@inputs:
@@ -44,7 +49,7 @@
           ];
 
           # Optional: Extra arguments passed to your modules
-          extraSpecialArgs = { inherit username; };
+          extraSpecialArgs = { inherit username; inherit inputs; };
         };
     };
 }

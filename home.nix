@@ -10,7 +10,8 @@
     ./programs/starship
     ./programs/helix
     ./programs/go
-    ./programs/astrovim
+    # ./programs/astrovim
+    ./programs/neovim
     ./programs/bash
     ./programs/k9s
 
@@ -61,6 +62,10 @@
     fontconfig
     xh
     tokei
+    sqlfluff
+
+
+    
 
     jnv
     fx
@@ -68,9 +73,9 @@
     ## rust
     rustc
     cargo
+
     
 
- 
 
     ## cpp
     gcc
