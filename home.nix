@@ -58,20 +58,20 @@
     graphviz # Graph visualization software
     dysk # Disk usage analyzer
     yt-dlp # YouTube downloader
-    typst
-    fontconfig
-    xh
-    tokei
-    sqlfluff
+    typst # Document preparation system
+    fontconfig # Font configuration library
+    xh # Command-line HTTP client
+    tokei # Code statistics tool
+    sqlfluff # SQL linter and formatter
 
 
     
 
-    jnv
-    fx
+    jnv # JSON viewer
+    fx # Command-line JSON processor
     # languages
     ## rust
-    rustc
+    rustc #
     cargo
 
     
@@ -89,9 +89,9 @@
     nodejs_22
 
     ## dev
-    glab
+    glab 
     postgresql
-    buf
+    buf # Protocol buffer compiler
 
 
     ## network
