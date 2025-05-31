@@ -65,7 +65,7 @@
     sqlfluff # SQL linter and formatter
 
 
-    
+
 
     jnv # JSON viewer
     fx # Command-line JSON processor
@@ -74,7 +74,6 @@
     rustc #
     cargo
 
-    
 
 
     ## cpp
@@ -89,7 +88,7 @@
     nodejs_22
 
     ## dev
-    glab 
+    glab
     postgresql
     buf # Protocol buffer compiler
 
