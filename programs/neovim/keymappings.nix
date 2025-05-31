@@ -37,6 +37,9 @@
               "<leader>s" = ":w<CR>";
               "<C-s>" = ":w<CR>"; # Add Ctrl+S for normal mode
 
+              # map Ctrl+Z to undo
+              "<C-z>" = "u";
+
               # navigate to left/right window
               "<leader>h" = "<C-w>h";
               "<leader>l" = "<C-w>l";
@@ -56,7 +59,6 @@
               "<M-k>" = ":move-2<CR>";
               "<M-j>" = ":move+<CR>";
 
-              "<leader>rp" = ":!remi push<CR>";
 
               "<localleader>e" = "$"; # go to end of line
               "<localleader>s" = "^"; # go to start of line
