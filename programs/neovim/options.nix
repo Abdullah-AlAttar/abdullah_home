@@ -70,5 +70,35 @@
       # Cursor style
       guicursor = "n-v-c:block-blinkwait700-blinkoff400-blinkon250,i-ci-ve:ver25-blinkwait700-blinkoff400-blinkon250"; # Blinking cursor
     };
+
+    highlight = {
+      Normal = {
+        bg = "NONE";
+        ctermbg = "NONE";
+      };
+      NonText = {
+        bg = "NONE";
+        ctermbg = "NONE";
+      };
+      LineNr = {
+        bg = "NONE";
+        ctermbg = "NONE";
+      };
+      SignColumn = {
+        bg = "NONE";
+        ctermbg = "NONE";
+      };
+      StatusLine = {
+        bg = "NONE";
+        ctermbg = "NONE";
+      };
+      StatusLineNC = {
+        bg = "NONE";
+        ctermbg = "NONE";
+      };
+      # Add any other groups you want to make transparent
+      # For example, for Telescope or other plugins, you might need to add:
+      # TelescopeNormal = { bg = "NONE"; ctermbg = "NONE"; };
+    };
   };
 }
