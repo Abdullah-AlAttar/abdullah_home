@@ -28,6 +28,15 @@
 
       web-devicons.enable = true;
 
+      # markview = {
+      #   enable = true;
+      #   settings = {
+      #     keymaps = {
+      #       # close_view = "q";
+      #     };
+      #   };
+      # };
+
       gitsigns = {
         enable = true;
         settings.signs = {
