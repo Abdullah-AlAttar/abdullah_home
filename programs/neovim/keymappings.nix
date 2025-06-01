@@ -54,6 +54,9 @@
               "<C-Left>" = ":vertical resize +2<CR>";
               "<C-Right>" = ":vertical resize -2<CR>";
 
+              # toggle word wrap
+              "<leader>w" = ":set wrap!<CR>";
+
               # move current line up/down
               # M = Alt key
               "<M-k>" = ":move-2<CR>";
