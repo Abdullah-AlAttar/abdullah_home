@@ -86,6 +86,7 @@
 
     ## node
     nodejs_22
+    bun
 
     ## dev
     glab
