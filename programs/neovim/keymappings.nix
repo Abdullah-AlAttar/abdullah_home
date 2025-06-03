@@ -14,89 +14,66 @@
       let
         normal =
           lib.mapAttrsToList
-            (key: action: {
+            (key: value: {
               mode = "n";
-              inherit action key;
+              key = key;
+              action = value.action;
+              options = { silent = true; noremap = true; desc = value.desc or null; };
             })
             {
-              "<Space>" = "<NOP>";
-
-              # Esc to clear search results
-              "<esc>" = ":noh<CR>";
-
-              # fix Y behaviour
-              Y = "y$";
-
-              # back and fourth between the two most recent files
-              "<C-c>" = ":b#<CR>";
-
-              # close by Ctrl+x
-              "<C-x>" = ":close<CR>";
-
-              # save by Space+s or Ctrl+s
-              "<leader>s" = ":w<CR>";
-              "<C-s>" = ":w<CR>"; # Add Ctrl+S for normal mode
-
-              # map Ctrl+Z to undo
-              "<C-z>" = "u";
-
-              # navigate to left/right window
-              "<leader>h" = "<C-w>h";
-              "<leader>l" = "<C-w>l";
-
-              # Press 'H', 'L' to jump to start/end of a line (first/last character)
-              L = "$";
-              H = "^";
-
-              # resize with arrows
-              "<C-Up>" = ":resize -2<CR>";
-              "<C-Down>" = ":resize +2<CR>";
-              "<C-Left>" = ":vertical resize +2<CR>";
-              "<C-Right>" = ":vertical resize -2<CR>";
-
-              # toggle word wrap
-              "<leader>w" = ":set wrap!<CR>";
-
-              # move current line up/down
-              # M = Alt key
-              "<M-k>" = ":move-2<CR>";
-              "<M-j>" = ":move+<CR>";
-
-
-              "<localleader>e" = "$"; # go to end of line
-              "<localleader>s" = "^"; # go to start of line
+              "<Space>" = { action = "<NOP>"; desc = "Disable Space"; };
+              "<esc>" = { action = ":noh<CR>"; desc = "Clear search highlight"; };
+              Y = { action = "y$"; desc = "Yank to end of line"; };
+              "<C-c>" = { action = ":b#<CR>"; desc = "Switch to last buffer"; };
+              "<C-x>" = { action = ":close<CR>"; desc = "Close window"; };
+              "<leader>s" = { action = ":w<CR>"; desc = "Save file"; };
+              "<C-s>" = { action = ":w<CR>"; desc = "Save file"; };
+              "<C-z>" = { action = "u"; desc = "Undo"; };
+              "<leader>h" = { action = "<C-w>h"; desc = "Go to left window"; };
+              "<leader>l" = { action = "<C-w>l"; desc = "Go to right window"; };
+              L = { action = "$"; desc = "Go to end of line"; };
+              H = { action = "^"; desc = "Go to start of line"; };
+              "<C-Up>" = { action = ":resize -2<CR>"; desc = "Resize window up"; };
+              "<C-Down>" = { action = ":resize +2<CR>"; desc = "Resize window down"; };
+              "<C-Left>" = { action = ":vertical resize +2<CR>"; desc = "Resize window left"; };
+              "<C-Right>" = { action = ":vertical resize -2<CR>"; desc = "Resize window right"; };
+              "<leader>w" = { action = ":set wrap!<CR>"; desc = "Toggle word wrap"; };
+              "<M-k>" = { action = ":move-2<CR>"; desc = "Move line up"; };
+              "<M-j>" = { action = ":move+<CR>"; desc = "Move line down"; };
+              "<localleader>e" = { action = "$"; desc = "Go to end of line"; };
+              "<localleader>s" = { action = "^"; desc = "Go to start of line"; };
             };
         visual =
           lib.mapAttrsToList
-            (key: action: {
+            (key: value: {
               mode = "v";
-              inherit action key;
+              key = key;
+              action = value.action;
+              options = { silent = true; noremap = true; desc = value.desc or null; };
             })
             {
-              # better indenting
-              ">" = ">gv";
-              "<" = "<gv";
-              "<TAB>" = ">gv";
-              "<S-TAB>" = "<gv";
-
-              # move selected line / block of text in visual mode
-              "K" = ":m '<-2<CR>gv=gv";
-              "J" = ":m '>+1<CR>gv=gv";
-
-              # sort
-              "<leader>s" = ":sort<CR>";
+              ">" = { action = ">gv"; desc = "Indent right"; };
+              "<" = { action = "<gv"; desc = "Indent left"; };
+              "<TAB>" = { action = ">gv"; desc = "Indent right"; };
+              "<S-TAB>" = { action = "<gv"; desc = "Indent left"; };
+              "K" = { action = ":m '<-2<CR>gv=gv"; desc = "Move selection up"; };
+              "J" = { action = ":m '>+1<CR>gv=gv"; desc = "Move selection down"; };
+              "<leader>s" = { action = ":sort<CR>"; desc = "Sort selection"; };
             };
         insert =
           lib.mapAttrsToList
-            (key: action: {
+            (key: value: {
               mode = "i";
-              inherit action key;
+              key = key;
+              action = value.action;
+              options = { silent = true; noremap = true; desc = value.desc or null;
+              };
             })
             {
-              "jk" = "<Esc>";
-              # "<C-s>" = "<Esc>:w<CR>"; # Add Ctrl+S for insert mode
+              "jk" = { action = "<Esc>"; desc = "Exit insert mode"; };
+              # "<C-s>" = { action = "<Esc>:w<CR>"; desc = "Save file"; };
             };
       in
-      config.lib.nixvim.keymaps.mkKeymaps { options.silent = true; } (normal ++ visual ++ insert);
+      normal ++ visual ++ insert;
   };
 }
