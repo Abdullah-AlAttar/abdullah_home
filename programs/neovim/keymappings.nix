@@ -60,6 +60,7 @@
               "J" = { action = ":m '>+1<CR>gv=gv"; desc = "Move selection down"; };
               "<leader>s" = { action = ":sort<CR>"; desc = "Sort selection"; };
             };
+
         insert =
           lib.mapAttrsToList
             (key: value: {
@@ -71,7 +72,7 @@
             })
             {
               "jk" = { action = "<Esc>"; desc = "Exit insert mode"; };
-              # "<C-s>" = { action = "<Esc>:w<CR>"; desc = "Save file"; };
+              "<C-s>" = { action = "<Esc>:w<CR>"; desc = "Save file"; };
             };
       in
       normal ++ visual ++ insert;

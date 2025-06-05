@@ -22,4 +22,3 @@
     skins =  import ./skins.nix;
   };
 }
-
