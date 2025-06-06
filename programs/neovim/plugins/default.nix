@@ -22,8 +22,8 @@
 
   programs.nixvim = {
     # colorschemes.gruvbox.enable = true;
-    colorschemes.vscode.enable = true;
-    # colorschemes.bluloco.enable = true;
+    # colorschemes.vscode.enable = true;
+    colorschemes.kanagawa.enable = true;
 
     plugins = {
       # Lazy loading
