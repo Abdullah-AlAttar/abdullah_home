@@ -15,6 +15,7 @@
     ./treesitter.nix # Syntax highlighting and code parsing
     # ./vimtex.nix # inria
     ./which-key.nix # Shows available keybindings
+    ./yazi.nix # file explorer for Neovim
   ];
 
   programs.nixvim = {
