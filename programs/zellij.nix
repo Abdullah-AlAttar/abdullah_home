@@ -1,9 +1,9 @@
-{ config, lib, pkgs, ... }:
+{  ... }:
 
 {
   programs.zellij = {
     enable = true;
-    enableZshIntegration = false;
+    enableZshIntegration = true;
     settings = {
       theme = "catppuccin-macchiato";
     };
