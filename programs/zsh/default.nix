@@ -23,6 +23,15 @@
       # theme = "robbyrussell";
       plugins = [
         "git"
+        # "docker"
+        # "kubectl"
+        # "npm"
+        # "golang"
+        "colored-man-pages"
+        "extract"
+        # "history-substring-search"
+        "sudo"
+        "web-search"
       ];
     };
 
