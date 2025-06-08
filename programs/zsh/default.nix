@@ -55,29 +55,27 @@
 
     shellAliases = rec {
       ".." = "cd ..";
-      cdtemp = "cd `mktemp -d`";
-      cp = "cp -iv";
-      ln = "ln -v";
-      mkdir = "mkdir -vp";
-      mv = "mv -iv";
+      cdtemp = "cd `mktemp -d`"; # Change to a temporary directory
+      cp = "cp -iv"; # Copy files interactively
+      ln = "ln -v"; # Create symbolic links with verbose output
+      mkdir = "mkdir -vp"; # Create directories with verbose output
+      mv = "mv -iv"; # Move files interactively
       rm = lib.mkMerge [
         (lib.mkIf pkgs.stdenv.targetPlatform.isDarwin "rm -v")
         (lib.mkIf (!pkgs.stdenv.targetPlatform.isDarwin) "rm -Iv")
-      ];
-      dh = "du -h";
-      df = "df -h";
-      su = "sudo -E su -m";
-      sysu = "systemctl --user";
-      jnsu = "journalctl --user";
-      svim = "sudoedit";
-      zreload =
-        "export ZSH_RELOADING_SHELL=1; source $ZDOTDIR/.zshenv; source $ZDOTDIR/.zshrc; unset ZSH_RELOADING_SHELL";
-      t = "task";
-      tg = "task -g";
-      cd = "z";
-      k = "kubectl";
-      kc = "kubecolor";
-      cat = "${pkgs.bat}/bin/bat --paging=never";
+      ]; # Remove files interactively or with verbose output
+      dh = "du -h"; # Disk usage in human-readable format
+      df = "df -h"; # Disk free in human-readable format
+      su = "sudo -E su -m"; # Switch user with environment preservation
+      sysu = "systemctl --user"; # Systemctl for user services
+      jnsu = "journalctl --user"; # Journalctl for user services
+      svim = "sudoedit"; # Edit files with sudo
+      t = "task"; # Taskfile command
+      tg = "task -g"; # Global task command
+      cd = "z"; # Change directory using zsh's z plugin
+      k = "kubectl"; # Alias for kubectl
+      kc = "kubecolor"; # Alias for kubecolor
+      cat = "${pkgs.bat}/bin/bat --paging=never"; # Use bat as a replacement for cat
     };
 
     initContent = (builtins.readFile ./zshInitContent.sh);
