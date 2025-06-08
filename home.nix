@@ -63,6 +63,7 @@
     xh # Command-line HTTP client
     tokei # Code statistics tool
     sqlfluff # SQL linter and formatter
+    strace
 
 
 
