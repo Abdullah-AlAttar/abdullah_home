@@ -12,17 +12,17 @@
 
     plugins = [
       # Vi keybindings
-      {
+/*       {
         name = "zsh-vi-mode";
         file = "./share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
         src = pkgs.zsh-vi-mode;
-      }
+       } */
     ];
     oh-my-zsh = {
       enable = true;
       # theme = "robbyrussell";
-      plugins = [ 
-        "git" 
+      plugins = [
+        "git"
       ];
     };
 
