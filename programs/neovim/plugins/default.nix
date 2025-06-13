@@ -2,7 +2,7 @@
   imports = [
     ./barbar.nix # Tab bar for Neovim
     ./comment.nix # Commenting plugin
-    ./floaterm.nix # Floating terminal for Neovim 
+    ./floaterm.nix # Floating terminal for Neovim
     # ./harpoon.nix
     ./lsp.nix # Language Server Protocol support
     ./lualine.nix # Status line for Neovim
@@ -18,7 +18,7 @@
     ./yazi.nix # file explorer for Neovim
     # ./hardtime.nix # Prevents accidental key presses
     ./neoscroll.nix # smooth scrolling for Neovim
-    # ./copilot.nix
+    ./copilot.nix
   ];
 
   programs.nixvim = {
