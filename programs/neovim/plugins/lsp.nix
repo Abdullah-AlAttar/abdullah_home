@@ -36,6 +36,7 @@
           texlab.enable = true; # inria
           gopls.enable = true;
           nil_ls.enable = true; # For Nix language (using nil_ls)
+          pyright.enable = true;
 
         };
       };
