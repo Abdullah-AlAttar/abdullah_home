@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   programs.k9s = {
@@ -11,14 +16,16 @@
           logoless = true;
           skin = "catppuccin-macchiato-transparent";
         };
-        logger = { fullScreen = false; };
+        logger = {
+          fullScreen = false;
+        };
       };
 
     };
 
     views = import ./views.nix;
-    plugin = import ./plugins.nix;
+    plugins = import ./plugins.nix;
 
-    skins =  import ./skins.nix;
+    skins = import ./skins.nix;
   };
 }
