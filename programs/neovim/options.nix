@@ -60,16 +60,14 @@
       wrap = false; # Prevent text from wrapping
 
       # Tab options
-      tabstop =
-        4; # Number of spaces a <Tab> in the text stands for (local to buffer)
+      tabstop = 4; # Number of spaces a <Tab> in the text stands for (local to buffer
       shiftwidth =
         4; # Number of spaces used for each step of (auto)indent (local to buffer)
       expandtab =
         true; # Expand <Tab> to spaces in Insert mode (local to buffer)
       autoindent = true; # Do clever autoindenting
 
-      textwidth =
-        0; # Maximum width of text that is being inserted.  A longer line will be
+      textwidth = 0; # Maximum width of text that is being inserted.  A longer line will be
       #   broken after white space to get this width.
 
       # Folding
@@ -109,7 +107,7 @@
       # Add any other groups you want to make transparent
       # For example, for Telescope or other plugins, you might need to add:
       # TelescopeNormal = { bg = "NONE"; ctermbg = "NONE"; };
- 
+
     };
   };
 }
