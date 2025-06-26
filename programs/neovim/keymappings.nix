@@ -42,6 +42,11 @@
               "<M-j>" = { action = ":move+<CR>"; desc = "Move line down"; };
               "<localleader>e" = { action = "$"; desc = "Go to end of line"; };
               "<localleader>s" = { action = "^"; desc = "Go to start of line"; };
+              
+              # Avante AI assistant keybindings
+              "<leader>aa" = { action = "<cmd>AvanteAsk<cr>"; desc = "Avante: Ask AI"; };
+              "<leader>ar" = { action = "<cmd>AvanteRefresh<cr>"; desc = "Avante: Refresh"; };
+              "<leader>ae" = { action = "<cmd>AvanteEdit<cr>"; desc = "Avante: Edit"; };
             };
         visual =
           lib.mapAttrsToList
@@ -59,6 +64,10 @@
               "K" = { action = ":m '<-2<CR>gv=gv"; desc = "Move selection up"; };
               "J" = { action = ":m '>+1<CR>gv=gv"; desc = "Move selection down"; };
               "<leader>s" = { action = ":sort<CR>"; desc = "Sort selection"; };
+              
+              # Avante visual mode keybindings
+              "<leader>aa" = { action = "<cmd>AvanteAsk<cr>"; desc = "Avante: Ask AI about selection"; };
+              "<leader>ae" = { action = "<cmd>AvanteEdit<cr>"; desc = "Avante: Edit selection"; };
             };
 
         insert =

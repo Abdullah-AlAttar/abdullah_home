@@ -2,6 +2,8 @@
 { config, pkgs, lib, username, ... }:
 
 {
+  # Allow unfree packages (required for GitHub Copilot)
+  nixpkgs.config.allowUnfree = true;
   imports = [
     # Include the results of the hardware scan
     ./programs/zsh

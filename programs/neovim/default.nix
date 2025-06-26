@@ -19,12 +19,7 @@
 
     performance = {
       combinePlugins = {
-        enable = true;
-        standalonePlugins = [
-          "hmts.nvim"
-          # "neorg"
-          "nvim-treesitter"
-        ];
+        enable = false;  # Disable to avoid help tags issues
       };
       byteCompileLua.enable = true;
     };
