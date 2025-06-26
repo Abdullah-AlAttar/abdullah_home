@@ -11,6 +11,10 @@
       enable = true;
 
       closeIfLastWindow = true;
+      filesystem.followCurrentFile = {
+        enabled = true;
+        leaveDirsOpen = false;
+      };
       window = {
         width = 30;
         autoExpandWidth = false;
