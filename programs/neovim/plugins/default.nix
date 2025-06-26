@@ -19,6 +19,7 @@
     # ./hardtime.nix # Prevents accidental key presses
     ./neoscroll.nix # smooth scrolling for Neovim
     ./copilot.nix
+    ./lazygit.nix
   ];
 
   programs.nixvim = {

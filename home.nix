@@ -47,6 +47,8 @@
   home.packages = with pkgs; [
     # pkgs.git       # Version control
     # neovim # Text editor
+    git
+    lazygit
     ripgrep # Fast search tool
     fd # Fast find alternative
     btop # Resource monitor
