@@ -29,6 +29,8 @@
               "<leader>s" = { action = ":w<CR>"; desc = "Save file"; };
               "<C-s>" = { action = ":w<CR>"; desc = "Save file"; };
               "<C-z>" = { action = "u"; desc = "Undo"; };
+              "<C-y>" = { action = "<C-r>"; desc = "Redo"; };
+              "<C-a>" = { action = "ggVG"; desc = "Select all"; };
               "<leader>h" = { action = "<C-w>h"; desc = "Go to left window"; };
               "<leader>l" = { action = "<C-w>l"; desc = "Go to right window"; };
               L = { action = "$"; desc = "Go to end of line"; };
