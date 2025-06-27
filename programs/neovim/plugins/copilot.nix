@@ -2,13 +2,35 @@
 {
   programs.nixvim = {
     plugins = {
-      # Use copilot.vim for GitHub Copilot integration
+      # Use copilot.lua for GitHub Copilot integration
       copilot-lua = {
         enable = true;
         settings = {
-          no_tab_map = true;
-          assume_mapped = true;
-          tab_fallback = "";
+          suggestion = {
+            enabled = true;
+            auto_trigger = true; # Enable automatic suggestions
+            hide_during_completion = true;
+            debounce = 75;
+            keymap = {
+              accept = false; # Disable default accept keymap since we define custom ones
+              accept_word = false;
+              accept_line = false;
+              next = false; # Disable default next keymap
+              prev = false; # Disable default prev keymap
+              dismiss = "<C-]>";
+            };
+          };
+          panel = {
+            enabled = true;
+            auto_refresh = false;
+            keymap = {
+              jump_prev = "[[";
+              jump_next = "]]";
+              accept = "<CR>";
+              refresh = "gr";
+              open = "<M-CR>";
+            };
+          };
         };
       };
 
@@ -62,22 +84,33 @@
       };
     };
 
-    # Add some basic Copilot keybindings
+    # Add some basic Copilot keybindings for copilot-lua
     keymaps = [
       {
         mode = "i";
         key = "<Tab>";
-        action = "copilot#Accept('\\<CR>')";
+        action.__raw = ''
+          function()
+            if require("copilot.suggestion").is_visible() then
+              require("copilot.suggestion").accept()
+            else
+              vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", false)
+            end
+          end
+        '';
         options = {
           silent = true;
-          expr = true;
           noremap = true;
         };
       }
       {
         mode = "i";
         key = "<C-j>";
-        action = "<Plug>(copilot-next)";
+        action.__raw = ''
+          function()
+            require("copilot.suggestion").next()
+          end
+        '';
         options = {
           silent = true;
           noremap = true;
@@ -86,7 +119,11 @@
       {
         mode = "i";
         key = "<C-k>";
-        action = "<Plug>(copilot-previous)";
+        action.__raw = ''
+          function()
+            require("copilot.suggestion").prev()
+          end
+        '';
         options = {
           silent = true;
           noremap = true;
