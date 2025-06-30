@@ -1,3 +1,4 @@
+{pkgs, ...}:
 {
   programs.nixvim = {
     diagnostic.settings.virtual_text = true;
@@ -33,12 +34,16 @@
 
         servers = {
           clangd.enable = true;
-          texlab.enable = true; # inria
           gopls.enable = true;
           nil_ls.enable = true; # For Nix language (using nil_ls)
           pyright.enable = true;
           jsonnet_ls.enable = true;
-
+          # tsp_server.enable = true; # Uncomment if you need TypeSpec support
+          tsp_server = {
+            enable = true;
+            package = null;
+          };
+          ts_ls.enable = true;
         };
       };
     };
