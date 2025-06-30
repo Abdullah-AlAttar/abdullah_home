@@ -1,5 +1,4 @@
-{pkgs, ...}:
-{
+{ pkgs, ... }: {
   programs.nixvim = {
     diagnostic.settings.virtual_text = true;
 
@@ -44,6 +43,8 @@
             package = null;
           };
           ts_ls.enable = true;
+          yamlls.enable = true;
+          jsonls.enable = true; 
         };
       };
     };
