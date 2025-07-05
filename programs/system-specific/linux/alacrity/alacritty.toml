@@ -33,19 +33,19 @@ white = "#a6adc8"
 
 # Window settings
 [window]
+# Set window dimensions for 80% of screen size (calculated for 1920x1080)
+dimensions = { columns = 219, lines = 57 }
 padding = { x = 10, y = 10 }
-decorations = "full"
+decorations = "None"
 startup_mode = "Windowed"
-opacity = 0.95
+opacity = 0.9
+dynamic_padding = false
 
-# Shell
-[shell]
-program = "zsh"
-args = ["-l"]
+
 
 # Performance
 [scrolling]
-history = 10000
+history = 40000
 multiplier = 3
 
 # Key bindings
@@ -53,4 +53,16 @@ multiplier = 3
 bindings = [
     { key = "V", mods = "Control|Shift", action = "Paste" },
     { key = "C", mods = "Control|Shift", action = "Copy" },
+    # Toggle vi mode
+    { key = "Space", mods = "Control|Shift", action = "ToggleViMode" },
+    # Vi mode navigation
+    { key = "Escape", mode = "Vi", action = "ClearSelection" },
+    { key = "I", mode = "Vi", action = "ToggleViMode" },
+    { key = "Y", mode = "Vi", action = "Copy" },
+    { key = "V", mode = "Vi", action = "ToggleNormalSelection" },
+    { key = "V", mods = "Shift", mode = "Vi", action = "ToggleLineSelection" },
+    { key = "V", mods = "Control", mode = "Vi", action = "ToggleBlockSelection" },
+    # Fullscreen toggle
+    { key = "F11", action = "ToggleFullscreen" },
+    { key = "Return", mods = "Alt", action = "ToggleFullscreen" },
 ]
