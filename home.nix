@@ -22,13 +22,13 @@
     ./programs/neovim
     ./programs/bash
     ./programs/k9s
+    ./programs/zellij
 
     ./programs/zoxide.nix
     ./programs/neofetch.nix
     ./programs/kubernetes.nix
     ./programs/yazi.nix
     ./programs/eza.nix
-    ./programs/zellij.nix
     ./programs/fzf.nix
     ./programs/bottom.nix
 
