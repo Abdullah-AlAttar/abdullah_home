@@ -27,7 +27,7 @@ in {
     govulncheck
   ];
 
-  home.file."revive.toml".source = ./revive.toml;
+  home.file.".config/revive.toml".source = ./revive.toml;
 
 
 

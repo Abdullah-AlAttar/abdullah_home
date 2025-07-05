@@ -1,5 +1,11 @@
 # ~/.config/home-manager/home.nix
-{ config, pkgs, lib, username, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  username,
+  ...
+}:
 
 {
   # Allow unfree packages (required for GitHub Copilot)
@@ -25,11 +31,14 @@
     ./programs/zellij.nix
     ./programs/fzf.nix
     ./programs/bottom.nix
+
+    # System-specific configurations
+    ./programs/system-specific
   ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = username; # Replace with your username
-  home.homeDirectory = "/home/${username}"; # Replace with your home path
+  home.homeDirectory = "/home/${username}"; # Replace with your home paths
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -70,17 +79,12 @@
     strace
     sqlite
 
-
-
-
     jnv # JSON viewer
     fx # Command-line JSON processor
     # languages
     ## rust
-    rustc #
+    rustc
     cargo
-
-
 
     ## cpp
     gcc
@@ -88,7 +92,6 @@
     ## python
     python314
     uv
-
 
     ## node
     nodejs_22
@@ -98,7 +101,6 @@
     glab
     postgresql
     buf # Protocol buffer compiler
-
 
     ## network
     lsof
@@ -114,8 +116,6 @@
   # set npm prefix to avoid permission issues
   # npm set prefix ~/.npm-global
   # this shit does not work
-  home.sessionPath = [
-    "$HOME/.npm-global/bin"
-  ];
+  home.sessionPath = [ "$HOME/.npm-global/bin" ];
 
 }
