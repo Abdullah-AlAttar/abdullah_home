@@ -129,6 +129,19 @@
           noremap = true;
         };
       }
+      {
+        mode = "i";
+        key = "<C-l>";
+        action.__raw = ''
+          function()
+            require("copilot.suggestion").accept_word()
+          end
+        '';
+        options = {
+          silent = true;
+          noremap = true;
+        };
+      }
     ];
   };
 }
