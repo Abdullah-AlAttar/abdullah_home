@@ -88,6 +88,8 @@
 
     ## cpp
     gcc
+    gnumake
+    cmake
 
     ## python
     python314
