@@ -133,6 +133,13 @@ symbol = ""
 style = "bg:sapphire"
 format = '[[ $symbol( $context) ](fg:crust bg:sapphire)]($style)'
 
+[kubernetes]
+disabled = true
+symbol = "☸ "
+style = "bg:sapphire"
+format = '[[ $symbol$context( \($namespace\)) ](fg:crust bg:sapphire)]($style)'
+contexts = []
+
 [conda]
 symbol = "  "
 style = "fg:crust bg:sapphire"
