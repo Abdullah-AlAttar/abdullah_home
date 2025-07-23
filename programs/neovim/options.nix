@@ -11,7 +11,11 @@
       # Use system clipboard
       register = "unnamedplus";
 
-      providers.wl-copy.enable = true;
+      providers = {
+        wl-copy.enable = true;   # Wayland
+        xclip.enable = true;     # X11
+        xsel.enable = true;      # X11 alternative
+      };
     };
 
     opts = {

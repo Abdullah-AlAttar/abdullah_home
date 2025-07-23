@@ -13,6 +13,7 @@
     kubecolor
     kubernetes-helm
     helm-docs
+    hadolint
   ];
 
   programs.zsh.initContent = ''
@@ -20,3 +21,4 @@
   '';
 
 }
+
