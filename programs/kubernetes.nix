@@ -14,6 +14,7 @@
     kubernetes-helm
     helm-docs
     hadolint
+    trivy
   ];
 
   programs.zsh.initContent = ''
