@@ -10,7 +10,7 @@
     # ./neorg.nix # Neorg plugin for Neovim
     ./neo-tree.nix # File explorer for Neovim
     # ./snacks.nix # TODO remove
-    ./startify.nix # Start screen for Neovim
+    # ./startify.nix # Start screen for Neovim
     ./telescope.nix # Fuzzy finder for Neovim
     ./treesitter.nix # Syntax highlighting and code parsing
     # ./vimtex.nix # inria
@@ -18,7 +18,7 @@
     ./yazi.nix # file explorer for Neovim
     # ./hardtime.nix # Prevents accidental key presses
     ./neoscroll.nix # smooth scrolling for Neovim
-    # ./copilot.nix
+    ./copilot.nix
     ./lazygit.nix
   ];
 
