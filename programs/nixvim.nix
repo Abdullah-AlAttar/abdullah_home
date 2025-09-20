@@ -5,11 +5,10 @@ let
     # If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
     # ref = "nixos-24.11";
   });
-in
-{
+in {
   imports = [
     # For home-manager
-    nixvim.homeManagerModules.nixvim
+    nixvim.homeModules.nixvim
     # For NixOS
     nixvim.nixosModules.nixvim
     # For nix-darwin

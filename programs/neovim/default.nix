@@ -1,7 +1,6 @@
-{ inputs, lib, ... }:
-{
+{ inputs, lib, ... }: {
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
+    inputs.nixvim.homeModules.nixvim
     ./autocommands.nix
     ./completion.nix
     ./keymappings.nix
@@ -19,7 +18,7 @@
 
     performance = {
       combinePlugins = {
-        enable = false;  # Disable to avoid help tags issues
+        enable = false; # Disable to avoid help tags issues
       };
       byteCompileLua.enable = true;
     };
