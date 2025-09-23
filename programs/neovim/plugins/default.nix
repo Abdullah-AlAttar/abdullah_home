@@ -25,7 +25,7 @@
   programs.nixvim = {
     # colorschemes.gruvbox.enable = true;
     # colorschemes.vscode.enable = true;
-    colorschemes.kanagawa.enable = true;
+    colorschemes.kanagawa-paper.enable = true;
 
     plugins = {
       # Lazy loading
