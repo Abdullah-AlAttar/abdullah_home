@@ -29,6 +29,7 @@ in {
     gopls
     delve
     govulncheck
+    golangci-lint
   ];
 
   home.file."revive.toml".source = ./revive.toml;
