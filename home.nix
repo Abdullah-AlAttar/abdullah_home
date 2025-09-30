@@ -107,6 +107,7 @@
     glab
     postgresql
     buf # Protocol buffer compiler
+    jfrog-cli
 
     ## network
     lsof
