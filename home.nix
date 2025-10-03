@@ -100,7 +100,7 @@
     uv
 
     ## node
-    nodejs_22
+    nodejs_24
     bun
 
     ## dev
