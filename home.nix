@@ -117,6 +117,7 @@
     # idk
     hugo
     openfortivpn
+    qpdf
   ];
 
   # Add a script to install Go tools during activation

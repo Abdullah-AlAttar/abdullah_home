@@ -10,14 +10,16 @@
     plugins.neo-tree = {
       enable = true;
 
-      closeIfLastWindow = true;
-      filesystem.followCurrentFile = {
-        enabled = true;
-        leaveDirsOpen = false;
-      };
-      window = {
-        width = 30;
-        autoExpandWidth = false;
+      settings = {
+        close_if_last_window = true;
+        filesystem.follow_current_file = {
+          enabled = true;
+          leave_dirs_open = false;
+        };
+        window = {
+          width = 30;
+          auto_expand_width = false;
+        };
       };
     };
     # highlight = {
