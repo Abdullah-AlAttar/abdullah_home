@@ -32,3 +32,8 @@ keybind = alt+j=goto_split:down
 keybind = alt+k=goto_split:up
 keybind = alt+h=goto_split:left
 keybind = alt+l=goto_split:right
+
+# custom-shader = shaders/cursor_tail.glsl
+custom-shader = shaders/cursor_warp.glsl
+custom-shader-animation = always
+# custom-shader = shaders/yourshader2.glsl
