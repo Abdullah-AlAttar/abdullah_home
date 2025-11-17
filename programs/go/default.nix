@@ -16,20 +16,20 @@ in {
   };
   home.packages = with pkgs; [
     # go_1_24 # This will be managed by programs.go
-    go-task
-    revive
-    temporal-cli
-    golines
+    # temporal-cli
+    # golines
     process-compose
+    # install with go install
+    go-task
     # gotools.jv
     # gotools.jsonnetfmt
-    sqlc
-    oapi-codegen
+    # sqlc
+    # oapi-codegen
+    # gopls
+    # delve
+    # golangci-lint
     kaf
-    gopls
-    delve
     govulncheck
-    golangci-lint
   ];
 
   home.file."revive.toml".source = ./revive.toml;
