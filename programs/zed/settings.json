@@ -25,9 +25,7 @@
       "user": null,
       "projects": [
         {
-          "paths": [
-            "/home/ab_dullah"
-          ]
+          "paths": ["/home/ab_dullah"]
         },
         {
           "paths": [
@@ -50,13 +48,37 @@
   },
   "theme": "Bluloco Dark",
   "experimental.theme_overrides": {
-    "syntax": {
-      "module": { "color": "red" },
-      "import_module": { "color": "red" }
-    },
     "version_control.added": "#00ff00cc",
-
-    "version_control.deleted": "#ff0000cc"
+    "version_control.deleted": "#ff0000cc",
+    "syntax": {
+      "comment.todo": {
+        "color": "#FFBD2BFF",
+        "background_color": "#FFBD2B1A",
+        "font_weight": 600
+      },
+      "comment.fixme": {
+        "color": "#F44747FF",
+        "background_color": "#F447471A",
+        "font_weight": 600
+      },
+      "comment.hack": {
+        "color": "#3794FFFF",
+        "background_color": "#3794FF12",
+        "font_style": "italic",
+        "font_weight": 500
+      },
+      "comment.note": {
+        "color": "#50A14FFF",
+        "background_color": "#50A14F12",
+        "font_style": "italic",
+        "font_weight": 500
+      },
+      "comment.error": {
+        "color": "#CA1243FF",
+        "background_color": "#CA12431A",
+        "font_weight": 700
+      }
+    }
   },
 
   "vim_mode": true,
