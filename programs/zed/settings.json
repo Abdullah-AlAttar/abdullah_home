@@ -1,0 +1,111 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "context_servers": {
+    "mcp-server-context7": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {
+        "context7_api_key": ""
+      }
+    }
+  },
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "wsl_connections": [
+    {
+      "distro_name": "Debian",
+      "user": null,
+      "projects": [
+        {
+          "paths": [
+            "/home/ab_dullah"
+          ]
+        },
+        {
+          "paths": [
+            "/home/ab_dullah/workspace/yunex/yv/varia-rpm/varia-rpm-backend/./"
+          ]
+        }
+      ]
+    }
+  ],
+  "base_keymap": "VSCode",
+  "icon_theme": "VSCode Icons for Zed (Dark Official Icons)",
+  "agent": {
+    "always_allow_tool_actions": true,
+    "default_profile": "write",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5"
+    },
+    "model_parameters": []
+  },
+  "theme": "Bluloco Dark",
+  "experimental.theme_overrides": {
+    "syntax": {
+      "module": { "color": "red" },
+      "import_module": { "color": "red" }
+    },
+    "version_control.added": "#00ff00cc",
+
+    "version_control.deleted": "#ff0000cc"
+  },
+
+  "vim_mode": true,
+  "ui_font_size": 14,
+  "buffer_font_size": 18.0,
+  "buffer_font_weight": 450,
+  "buffer_font_features": {
+    "calt": true
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false
+  },
+  "project_panel": {
+    // "button": false,
+    "entry_spacing": "standard"
+  },
+  "tabs": {
+    "file_icons": true
+  },
+  "autosave": "on_focus_change",
+  "buffer_font_family": "CaskaydiaCove Nerd Font",
+  "vertical_scroll_margin": 10,
+  "relative_line_numbers": "enabled",
+  "show_whitespaces": "all",
+  "lsp": {
+    "golangci-lint": {
+      "initialization_options": {
+        "command": [
+          "golangci-lint",
+          "run",
+          "--output.json.path",
+          "stdout",
+          "--show-stats=false",
+          "--output.text.path="
+        ]
+      }
+    }
+  },
+  "languages": {
+    "Go": {
+      "language_servers": ["gopls", "golangci-lint"]
+    }
+  },
+  "diagnostics": {
+    "button": true,
+    "include_warnings": true,
+    "inline": {
+      "enabled": true
+    }
+  }
+}
