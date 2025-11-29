@@ -12,21 +12,21 @@ if command -v xrandr &> /dev/null; then
         WIDTH=$(echo $RESOLUTION | cut -d'x' -f1)
         HEIGHT=$(echo $RESOLUTION | cut -d'x' -f2)
         echo "Screen resolution: ${WIDTH}x${HEIGHT}"
-        
+
         # Calculate 80% of screen
         TARGET_WIDTH=$((WIDTH * 80 / 100))
         TARGET_HEIGHT=$((HEIGHT * 80 / 100))
-        
+
         echo "Target window size (80%): ${TARGET_WIDTH}x${TARGET_HEIGHT}"
-        
+
         # Estimate character dimensions (assuming font size 12)
         # Average character width: ~7-8 pixels, height: ~15-16 pixels
         CHAR_WIDTH=7
         CHAR_HEIGHT=15
-        
+
         COLUMNS=$((TARGET_WIDTH / CHAR_WIDTH))
         LINES=$((TARGET_HEIGHT / CHAR_HEIGHT))
-        
+
         echo "Suggested Alacritty dimensions:"
         echo "columns = $COLUMNS"
         echo "lines = $LINES"
