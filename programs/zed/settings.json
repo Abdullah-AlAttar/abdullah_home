@@ -7,42 +7,16 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "context_servers": {
-    "mcp-server-context7": {
-      "source": "extension",
-      "enabled": true,
-      "settings": {
-        "context7_api_key": ""
-      }
-    }
-  },
-  "features": {
-    "edit_prediction_provider": "copilot"
-  },
-  "wsl_connections": [
-    {
-      "distro_name": "Debian",
-      "user": null,
-      "projects": [
-        {
-          "paths": ["/home/ab_dullah"]
-        },
-        {
-          "paths": [
-            "/home/ab_dullah/workspace/yunex/yv/varia-rpm/varia-rpm-backend/./"
-          ]
-        }
-      ]
-    }
-  ],
   "base_keymap": "VSCode",
   "icon_theme": "VSCode Icons for Zed (Dark Official Icons)",
+  // "soft_wrap": "editor_width",
   "agent": {
+    "play_sound_when_agent_done": false,
     "always_allow_tool_actions": true,
     "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5"
+      "model": "claude-sonnet-4.5"
     },
     "model_parameters": []
   },
@@ -50,6 +24,11 @@
   "experimental.theme_overrides": {
     "version_control.added": "#00ff00cc",
     "version_control.deleted": "#ff0000cc",
+    "terminal.background": "#212233ff",
+    "terminal.foreground": "#f8f8f2",
+    // Panel/sidebar background
+    "panel.background": "#1a1a1a",
+    "panel.foreground": "#f8f8f2",
     "syntax": {
       "comment.todo": {
         "color": "#FFBD2BFF",
@@ -83,7 +62,7 @@
 
   "vim_mode": true,
   "ui_font_size": 14,
-  "buffer_font_size": 18.0,
+  "buffer_font_size": 16.0,
   "buffer_font_weight": 450,
   "buffer_font_features": {
     "calt": true
@@ -129,5 +108,27 @@
     "inline": {
       "enabled": true
     }
-  }
+  },
+  "context_servers": {
+    "mcp-server-context7": {
+      "enabled": true,
+      "settings": {
+        "context7_api_key": ""
+      }
+    }
+  },
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "wsl_connections": [
+    {
+      "distro_name": "Debian",
+      "user": null,
+      "projects": [
+        {
+          "paths": ["/home/ab_dullah"]
+        }
+      ]
+    }
+  ]
 }
