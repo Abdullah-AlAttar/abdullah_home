@@ -15,6 +15,10 @@
     helm-docs
     hadolint
     trivy
+    # fblog
+    # bunyan-rs
+    # pino-pretty
+    # jsonlog
   ];
 
   programs.zsh.initContent = ''
