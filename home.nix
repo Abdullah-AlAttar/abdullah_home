@@ -82,6 +82,7 @@
     xclip # X11 clipboard utility
     xsel # X11 clipboard utility (alternative)
     wl-clipboard # Wayland clipboard utility (for future use)
+    unixtools.column
 
     jnv # JSON viewer
     fx # Command-line JSON processor
