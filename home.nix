@@ -65,6 +65,8 @@
     yq-go # YAML processor
     jq # JSON processor
     nixfmt-classic # Nix formatter
+    nil # Nix linter
+    nixd # Nix daemon
     unzip # Unzip files
     zip # Zip files
     bat # Cat replacement
@@ -95,10 +97,12 @@
     gcc
     gnumake
     cmake
+    llvmPackages_20.clang-tools
 
     ## python
     python314
-    uv
+    meson
+    ninja
 
     ## node
     nodejs_24
