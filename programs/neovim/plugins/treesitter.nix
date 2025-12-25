@@ -9,7 +9,9 @@
         highlight.enable = true;
         indent.enable = true;
       };
-      folding = true;
+      folding = {
+        enable = true;
+      };
     };
 
     treesitter-refactor = {
