@@ -101,6 +101,7 @@
 
     ## python
     python314
+    uv
     meson
     ninja
 
