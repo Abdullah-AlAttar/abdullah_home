@@ -1,37 +1,27 @@
 { config, lib, pkgs, ... }:
 
-let gotools = import ./gotools.nix { inherit pkgs; };
-in {
+{
   programs.go = {
     enable = true;
-    package = pkgs.go_1_25; # Specify the Go version here
-    # You can configure other options like goPath, goBin, etc., if needed.
-    # For example:
-    # goPath = "go"; # Sets GOPATH to $HOME/go
-    # goBin = ".local/bin/go"; # Sets GOBIN to $HOME/.local/bin/go
+    package = pkgs.go_1_25;
     env = {
-      GO111MODULE = "on";
+      GOPATH = "${config.home.homeDirectory}/go";
       GOPRIVATE = "gitlab.mocca.yunextraffic.cloud";
     };
   };
+
   home.packages = with pkgs; [
-    # go_1_24 # This will be managed by programs.go
-    # temporal-cli
-    # golines
-    process-compose
-    # install with go install
+    # Install these via Nix so they stay stable
+    gopls            # Language Server
+    delve            # Debugger
+    golangci-lint    # Linter
+    
+    # Your other tools
     go-task
-    # gotools.jv
-    # gotools.jsonnetfmt
-    # sqlc
-    # oapi-codegen
-    # gopls
-    # delve
-    # golangci-lint
+    process-compose
     kaf
-    govulncheck
   ];
 
-  home.file."revive.toml".source = ./revive.toml;
-
+  # Just in case you manually 'go install' something else later
+  home.sessionPath = [ "$HOME/go/bin" ];
 }
