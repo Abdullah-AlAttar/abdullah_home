@@ -124,6 +124,7 @@
     hugo
     openfortivpn
     qpdf
+    asciinema_3
   ];
 
   # Add a script to install Go tools during activation
