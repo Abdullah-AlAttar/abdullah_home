@@ -125,6 +125,7 @@
     openfortivpn
     qpdf
     asciinema_3
+    ocrmypdf
   ];
 
   # Add a script to install Go tools during activation
