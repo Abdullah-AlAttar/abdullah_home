@@ -9,7 +9,6 @@
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    catppuccin.url = "github:catppuccin/nix";
     # Home Manager
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -26,7 +25,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       # Replace <username> with your actual Linux username
       username = "ab_dullah";
@@ -45,7 +44,6 @@
           modules = [
             ./home.nix
             # You can add more modules here later if you split your config
-            catppuccin.homeModules.catppuccin
           ];
 
           # Optional: Extra arguments passed to your modules
