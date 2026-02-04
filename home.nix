@@ -126,6 +126,8 @@
     qpdf
     asciinema_3
     ocrmypdf
+
+    devenv
   ];
 
   # Add a script to install Go tools during activation
