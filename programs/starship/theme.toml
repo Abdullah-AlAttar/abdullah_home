@@ -20,6 +20,7 @@ $kotlin\
 $haskell\
 $python\
 [](fg:green bg:sapphire)\
+$direnv\
 $conda\
 [](fg:sapphire bg:lavender)\
 $time\
@@ -145,6 +146,12 @@ symbol = "  "
 style = "fg:crust bg:sapphire"
 format = '[$symbol$environment ]($style)'
 ignore_base = false
+
+[direnv]
+disabled = false
+format = '[$symbol]($style)'
+symbol = "󰌪 "
+style = "fg:crust bg:sapphire"
 
 [time]
 disabled = false

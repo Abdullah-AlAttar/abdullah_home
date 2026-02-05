@@ -31,6 +31,7 @@
     ./programs/eza.nix
     ./programs/fzf.nix
     ./programs/bottom.nix
+    ./programs/direnv
 
     # System-specific configurations
     ./programs/system-specific
@@ -64,7 +65,7 @@
     hello # Simple test package
     yq-go # YAML processor
     jq # JSON processor
-    nixfmt-classic # Nix formatter
+    nixfmt # Nix formatter
     nil # Nix linter
     nixd # Nix daemon
     unzip # Unzip files
