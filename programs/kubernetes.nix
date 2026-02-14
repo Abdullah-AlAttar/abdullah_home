@@ -9,7 +9,7 @@
     kubectx
     stern
     sops
-    argocd
+    # argocd
     kubecolor
     kubernetes-helm
     helm-docs
