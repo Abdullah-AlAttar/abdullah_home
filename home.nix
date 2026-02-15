@@ -91,8 +91,8 @@
     fx # Command-line JSON processor
     # languages
     ## rust
-    rustc
-    cargo
+    # rustc
+    #cargo
 
     ## cpp
     gcc
