@@ -129,6 +129,11 @@
     ocrmypdf
 
     devenv
+    dioxus-cli
+    binaryen
+    vips
+    inkscape
+        # cargo-tauri
   ];
 
   # Add a script to install Go tools during activation
