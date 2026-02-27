@@ -3,7 +3,7 @@
 {
   programs.go = {
     enable = true;
-    package = pkgs.go_1_25;
+    package = pkgs.go;
     env = {
       GOPATH = "${config.home.homeDirectory}/go";
       GOPRIVATE = "gitlab.mocca.yunextraffic.cloud";

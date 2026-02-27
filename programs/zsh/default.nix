@@ -61,10 +61,7 @@
       ln = "ln -v"; # Create symbolic links with verbose output
       mkdir = "mkdir -vp"; # Create directories with verbose output
       mv = "mv -iv"; # Move files interactively
-      rm = lib.mkMerge [
-        (lib.mkIf pkgs.stdenv.targetPlatform.isDarwin "rm -v")
-        (lib.mkIf (!pkgs.stdenv.targetPlatform.isDarwin) "rm -Iv")
-      ]; # Remove files interactively or with verbose output
+      rm = if pkgs.stdenv.targetPlatform.isDarwin then "rm -v" else "rm -Iv"; # Remove files interactively or with verbose output
       dh = "du -h"; # Disk usage in human-readable format
       df = "df -h"; # Disk free in human-readable format
       su = "sudo -E su -m"; # Switch user with environment preservation

@@ -13,7 +13,6 @@
   imports = [
     # Include the results of the hardware scan
     ./programs/zsh
-    ./programs/nu
     ./programs/atuin
     ./programs/starship
     ./programs/helix
@@ -141,6 +140,10 @@
   # set npm prefix to avoid permission issues
   # npm set prefix ~/.npm-global
   # this shit does not work
-  home.sessionPath = [ "$HOME/.npm-global/bin" ];
+  home.sessionPath = [
+    "$HOME/.npm-global/bin"
+    "$HOME/.local/bin"
+    "$HOME/.cargo/bin"
+  ];
 
 }

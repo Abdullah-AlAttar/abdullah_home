@@ -3,9 +3,8 @@
 
 let
   # Check if running in WSL by looking for WSL-specific environment
-  isWSL = builtins.pathExists /proc/sys/fs/binfmt_misc/WSLInterop 
-         || builtins.pathExists /run/WSL
-         || (builtins.getEnv "WSL_DISTRO_NAME" != "");
+  isWSL = builtins.pathExists /proc/sys/fs/binfmt_misc/WSLInterop
+         || builtins.pathExists /run/WSL;
   
   # Enable native Linux configurations only on real Linux (not WSL)
   enableNativeLinux = pkgs.stdenv.isLinux && !isWSL;
