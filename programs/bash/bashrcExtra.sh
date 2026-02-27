@@ -5,4 +5,4 @@ export PATH=$HOME/.npm-global/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 
-zsh
+# zsh
