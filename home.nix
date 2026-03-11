@@ -24,7 +24,7 @@
     ./programs/zellij
 
     ./programs/zoxide.nix
-    ./programs/neofetch.nix
+    ./programs/fastfetch.nix
     ./programs/kubernetes.nix
     ./programs/yazi.nix
     ./programs/eza.nix
@@ -132,7 +132,7 @@
     binaryen
     vips
     inkscape
-        # cargo-tauri
+    # cargo-tauri
   ];
 
   # Add a script to install Go tools during activation
@@ -144,6 +144,7 @@
     "$HOME/.npm-global/bin"
     "$HOME/.local/bin"
     "$HOME/.cargo/bin"
+    "$HOME/.opencode/bin"
   ];
 
 }
