@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
   programs.zellij = {
@@ -7,6 +7,13 @@
     settings = { 
       theme = "catppuccin-macchiato";
     };
+    extraConfig = ''
+      keybinds {
+        normal {
+          bind "Ctrl f" { SwitchToMode "Scroll"; }
+        }
+      }
+    '';
   };
 
 }
