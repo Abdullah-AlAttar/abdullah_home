@@ -10,6 +10,7 @@
     extraConfig = ''
       keybinds {
         normal {
+          unbind "Ctrl s"
           bind "Ctrl f" { SwitchToMode "Scroll"; }
         }
       }
