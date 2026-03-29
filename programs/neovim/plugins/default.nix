@@ -18,7 +18,7 @@
     ./yazi.nix # file explorer for Neovim
     # ./hardtime.nix # Prevents accidental key presses
     ./neoscroll.nix # smooth scrolling for Neovim
-    ./copilot.nix
+    # ./copilot.nix
     ./lazygit.nix
   ];
 

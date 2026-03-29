@@ -133,6 +133,7 @@
     vips
     inkscape
     # cargo-tauri
+    mkvtoolnix-cli
   ];
 
   # Add a script to install Go tools during activation
