@@ -18,7 +18,8 @@
     ./programs/helix
     ./programs/go
     # ./programs/astrovim
-    ./programs/neovim
+    # ./programs/neovim  # nixvim config (kept for reference)
+    ./programs/neovim-nvf
     ./programs/bash
     ./programs/k9s
     ./programs/zellij
