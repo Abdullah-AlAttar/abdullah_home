@@ -55,7 +55,6 @@
   # Add some packages to your user profile
   home.packages = with pkgs; [
     # pkgs.git       # Version control
-    # neovim # Text editor
     git
     lazygit
     ripgrep # Fast search tool
@@ -89,9 +88,6 @@
     jnv # JSON viewer
     fx # Command-line JSON processor
     # languages
-    ## rust
-    # rustc
-    #cargo
 
     ## cpp
     gcc
