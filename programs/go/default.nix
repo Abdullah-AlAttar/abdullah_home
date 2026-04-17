@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   programs.go = {
@@ -12,10 +17,10 @@
 
   home.packages = with pkgs; [
     # Install these via Nix so they stay stable
-    gopls            # Language Server
-    delve            # Debugger
-    golangci-lint    # Linter
-    
+    gopls # Language Server
+    delve # Debugger
+    golangci-lint # Linter
+
     # Your other tools
     go-task
     # process-compose

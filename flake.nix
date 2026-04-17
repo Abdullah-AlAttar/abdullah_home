@@ -19,13 +19,19 @@
       inputs.nixpkgs.follows = "nixpkgs"; # Make HM use the same nixpkgs
     };
     nixvim = {
-       url = "github:nix-community/nixvim";
-        # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/nixvim";
+      # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
     let
       # Replace <username> with your actual Linux username
       username = "ab_dullah";
@@ -34,20 +40,23 @@
 
       # Helper to access nixpkgs for the specified system
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
+    in
+    {
       # Define the Home Manager configuration output
-      homeConfigurations.${username} =
-        home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+      homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
 
-          # Modules to import: your main configuration file (home.nix)
-          modules = [
-            ./home.nix
-            # You can add more modules here later if you split your config
-          ];
+        # Modules to import: your main configuration file (home.nix)
+        modules = [
+          ./home.nix
+          # You can add more modules here later if you split your config
+        ];
 
-          # Optional: Extra arguments passed to your modules
-          extraSpecialArgs = { inherit username; inherit inputs; };
+        # Optional: Extra arguments passed to your modules
+        extraSpecialArgs = {
+          inherit username;
+          inherit inputs;
         };
+      };
     };
 }

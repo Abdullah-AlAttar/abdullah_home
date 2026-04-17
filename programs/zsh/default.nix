@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   programs.zsh = {
@@ -12,11 +17,12 @@
 
     plugins = [
       # Vi keybindings
-      /* {
-              name = "zsh-vi-mode";
-              file = "./share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
-              src = pkgs.zsh-vi-mode;
-             }
+      /*
+        {
+             name = "zsh-vi-mode";
+             file = "./share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+             src = pkgs.zsh-vi-mode;
+            }
       */
     ];
     oh-my-zsh = {
@@ -73,8 +79,7 @@
       cd = "z"; # Change directory using zsh's z plugin
       k = "kubectl"; # Alias for kubectl
       kc = "kubecolor"; # Alias for kubecolor
-      cat =
-        "${pkgs.bat}/bin/bat --paging=never"; # Use bat as a replacement for cat
+      cat = "${pkgs.bat}/bin/bat --paging=never"; # Use bat as a replacement for cat
     };
 
     initContent = (builtins.readFile ./zshInitContent.sh);

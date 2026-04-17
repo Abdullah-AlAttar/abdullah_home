@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
 
@@ -7,7 +12,10 @@
     enableZshIntegration = true; # Enables default eza aliases for Zsh
     icons = "auto";
     colors = "auto"; # Configure eza to use colors automatically
-    extraOptions = [ "--group-directories-first" "--classify" ]; # Common flags for eza
+    extraOptions = [
+      "--group-directories-first"
+      "--classify"
+    ]; # Common flags for eza
   };
 
   # Define or override eza-related Zsh aliases here.

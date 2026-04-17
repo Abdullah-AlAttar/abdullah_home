@@ -9,6 +9,10 @@ tasks:
     desc: Clean up the Nix store
     cmd: nix-collect-garbage -d
 
+  nix:format:
+    desc: Format all Nix files
+    cmd: find . -name '*.nix' -print0 | xargs -0 nixfmt
+
   flake:update:
     desc: Update Nix flake inputs
     cmd: nix flake update

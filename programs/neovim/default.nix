@@ -1,4 +1,5 @@
-{ inputs, lib, ... }: {
+{ inputs, lib, ... }:
+{
   imports = [
     inputs.nixvim.homeModules.nixvim
     ./autocommands.nix
