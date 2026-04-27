@@ -130,6 +130,8 @@
     inkscape
     # cargo-tauri
     mkvtoolnix-cli
+    imagemagick
+    potrace
   ];
 
   # Add a script to install Go tools during activation
