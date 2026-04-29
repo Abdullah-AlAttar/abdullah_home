@@ -3,6 +3,7 @@
     ./barbar.nix # Tab bar for Neovim
     ./comment.nix # Commenting plugin
     ./floaterm.nix # Floating terminal for Neovim
+    ./fff.nix # Fast fuzzy file finder
     # ./harpoon.nix
     ./lsp.nix # Language Server Protocol support
     ./lualine.nix # Status line for Neovim
@@ -76,5 +77,6 @@
         };
       };
     };
+
   };
 }

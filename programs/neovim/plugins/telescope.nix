@@ -14,7 +14,7 @@
         # FZF like bindings
         "<C-p>" = "git_files";
         "<leader>p" = "oldfiles";
-        "<C-e>" = "find_files";
+        # "<C-e>" = "find_files";
         "<C-f>" = "live_grep";
       };
 
