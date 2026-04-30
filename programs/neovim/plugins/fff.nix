@@ -47,7 +47,37 @@
       {
         mode = "n";
         key = "<C-e>";
-        action = ":FFFFind<CR>";
+        action.__raw = "function() require('fff').find_files() end";
+        options.silent = true;
+      }
+      {
+        mode = "n";
+        key = "<leader>ff";
+        action.__raw = "function() require('fff').find_files() end";
+        options.silent = true;
+      }
+      {
+        mode = "n";
+        key = "<C-f>";
+        action.__raw = "function() require('fff').live_grep() end";
+        options.silent = true;
+      }
+      {
+        mode = "n";
+        key = "<leader>fg";
+        action.__raw = "function() require('fff').live_grep() end";
+        options.silent = true;
+      }
+      {
+        mode = "n";
+        key = "<leader>fz";
+        action.__raw = "function() require('fff').live_grep({ grep = { modes = { 'fuzzy', 'plain' } } }) end";
+        options.silent = true;
+      }
+      {
+        mode = "n";
+        key = "<leader>fw";
+        action.__raw = "function() require('fff').live_grep({ query = vim.fn.expand('<cword>') }) end";
         options.silent = true;
       }
     ];

@@ -1,7 +1,7 @@
 {
   programs.nixvim = {
     plugins.telescope = {
-      enable = true;
+      enable = false;
 
       keymaps = {
         # Find files using Telescope command-line sugar.

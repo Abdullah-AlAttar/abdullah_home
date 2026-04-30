@@ -71,7 +71,7 @@
     bat # Cat replacement
     graphviz # Graph visualization software
     dysk # Disk usage analyzer
-    yt-dlp # YouTube downloader
+    # yt-dlp # DISABLED: pulls deno as transitive dependency, crashes rustc on build
     typst # Document preparation system
     fontconfig # Font configuration library
     xh # Command-line HTTP client
