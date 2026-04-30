@@ -3,8 +3,8 @@
     enable = true;
 
     settings = {
-      opleader.line = "<leader>/";
-      toggler.line = "<leader>/";
+      opleader.line = "<C-_>";
+      toggler.line = "<C-_>";
     };
   };
 }
