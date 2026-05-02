@@ -21,6 +21,3 @@ tasks:
     desc: Set npm prefix to local, to avoid permission issues
     cmd: npm config set prefix ~/.npm-global
 
-  astrovim:sync:
-    desc: Copy AstroVim lockfile
-    cmd: cp ~/.config/nvim/lazy-lock.json ./programs/astrovim/astro_template/lazy-lock.json
