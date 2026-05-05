@@ -1,5 +1,5 @@
 {
-  dracula = builtins.fromJSON (builtins.readFile ./skins/dracula.json);
+  # dracula = builtins.fromJSON (builtins.readFile ./skins/dracula.json);
   gruvbox-material = builtins.fromJSON (builtins.readFile ./skins/gruvbox-material.json);
   catppuccin-mocha-transparent = builtins.fromJSON (
     builtins.readFile ./skins/catppuccin-mocha-transparent.json
