@@ -7,7 +7,7 @@
         ui = {
           headless = false;
           logoless = true;
-          skin = "catppuccin-macchiato-transparent";
+          skin = "gruvbox-material";
         };
         logger = {
           fullScreen = false;
