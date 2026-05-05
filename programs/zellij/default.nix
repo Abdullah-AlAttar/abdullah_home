@@ -5,7 +5,8 @@
     enable = true;
     enableZshIntegration = false;
     settings = {
-      theme = "catppuccin-macchiato";
+      # theme = "catppuccin-macchiato";
+      theme = "gruvbox-dark";
     };
     extraConfig = ''
       keybinds {
