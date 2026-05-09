@@ -3,6 +3,7 @@
   config,
   pkgs,
   lib,
+  isNixOS ? false,
   ...
 }:
 
@@ -12,6 +13,9 @@ let
 
   # Enable native Linux configurations only on real Linux (not WSL)
   enableNativeLinux = pkgs.stdenv.isLinux && !isWSL;
+
+  # GUI apps should be managed only in NixOS environments on native Linux.
+  enableGuiApps = isNixOS && enableNativeLinux;
 in
 {
   imports = [
@@ -23,5 +27,11 @@ in
     type = lib.types.bool;
     default = enableNativeLinux;
     description = "Enable native Linux configurations (excludes WSL/generic Linux)";
+  };
+
+  options.programs.system-specific.enableGuiApps = lib.mkOption {
+    type = lib.types.bool;
+    default = enableGuiApps;
+    description = "Enable GUI application modules only on NixOS native Linux systems.";
   };
 }

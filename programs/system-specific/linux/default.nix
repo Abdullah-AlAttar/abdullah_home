@@ -10,5 +10,7 @@
   imports = [
     ./alacrity
     ./ghostty
+    ./fonts
+    ./zed
   ];
 }

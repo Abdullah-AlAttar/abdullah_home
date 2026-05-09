@@ -39,7 +39,32 @@ Each program lives in `programs/<name>/`. A directory module uses `default.nix` 
 - **Helix**: `programs/helix/` — config and language settings loaded from TOML files via `builtins.fromTOML`.
 - **Prompt**: `programs/starship/theme.toml` — Catppuccin Mocha palette, powerline-style.
 - **Dev environments**: `programs/direnv/` — nix-direnv enabled; the stdlib injects `devenv` direnv helpers so `use devenv` works in `.envrc` files.
-- **System-specific**: `programs/system-specific/` — detects WSL at eval time via `builtins.pathExists /proc/sys/fs/binfmt_misc/WSLInterop`. Native Linux-only configs (Alacritty, Ghostty terminals) live under `programs/system-specific/linux/` and are gated by `enableNativeLinux`.
+- **System-specific**: `programs/system-specific/` — detects WSL at eval time via `builtins.pathExists /proc/sys/fs/binfmt_misc/WSLInterop`. Native Linux-only configs (Alacritty, Ghostty terminals) live under `programs/system-specific/linux/`.
+
+### Best practice: GUI-only on NixOS
+
+Use one explicit context flag plus one central gate:
+
+- Pass `isNixOS = true` when Home Manager is used via the NixOS module.
+- Pass `isNixOS = false` for standalone Home Manager (WSL/Ubuntu).
+- In `programs/system-specific/default.nix`, compute `enableGuiApps = isNixOS && pkgs.stdenv.isLinux && !isWSL`.
+- Gate GUI package installs and GUI dotfiles with `config.programs.system-specific.enableGuiApps`.
+
+Current result in this repo:
+
+- Ghostty is installed only when `enableGuiApps` is true.
+- Ghostty is exported as the default terminal via `home.sessionVariables.TERMINAL = "ghostty"`.
+- GUI fonts are installed only when `enableGuiApps` is true from `programs/system-specific/linux/fonts/`:
+  - `google-fonts` (source package that can contain Google Sans Code Monospaced files)
+  - `nerd-fonts.caskaydia-cove`
+
+### HM vs NixOS ownership
+
+Use this split to keep the dendritic pattern clean:
+
+- Put user-scoped GUI apps and dotfiles in Home Manager modules (for example `ghostty`, per-user font packages, editor config).
+- Put system-wide desktop stack in NixOS host modules under `modules/hosts/mainPC/` (display manager, desktop environment, portals, drivers, system fonts for all users).
+- Keep cross-platform gating in one Home Manager location (`programs/system-specific/default.nix`) and let leaf modules consume that option.
 
 ### Flake inputs
 

@@ -56,6 +56,7 @@
         extraSpecialArgs = {
           inherit username;
           inherit inputs;
+          isNixOS = false;
         };
       };
     };
