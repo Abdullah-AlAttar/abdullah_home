@@ -6,13 +6,12 @@
 }:
 
 let
-  hasZed = builtins.hasAttr "zed" pkgs || builtins.hasAttr "zed-editor" pkgs;
-  zedPkg = if builtins.hasAttr "zed" pkgs then pkgs.zed else pkgs."zed-editor";
+  hasZedEditor = builtins.hasAttr "zed-editor" pkgs;
 in
 {
   config = lib.mkMerge [
-    (lib.mkIf (config.programs.system-specific.enableGuiApps && hasZed) {
-      home.packages = [ zedPkg ];
+    (lib.mkIf (config.programs.system-specific.enableGuiApps && hasZedEditor) {
+      home.packages = [ pkgs."zed-editor" ];
 
       home.file.".config/zed/settings.json" = {
         source = ./settings.json;
@@ -24,8 +23,8 @@ in
     })
     {
       warnings =
-        lib.optional (config.programs.system-specific.enableGuiApps && !hasZed)
-          "programs.system-specific.zed: zed is not available for this platform; skipping installation.";
+        lib.optional (config.programs.system-specific.enableGuiApps && !hasZedEditor)
+          "programs.system-specific.zed: zed-editor is not available for this platform; skipping installation.";
     }
   ];
 }

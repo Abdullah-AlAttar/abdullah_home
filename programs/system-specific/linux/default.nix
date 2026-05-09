@@ -12,5 +12,6 @@
     ./ghostty
     ./fonts
     ./zed
+    ./microsoft-edge
   ];
 }
