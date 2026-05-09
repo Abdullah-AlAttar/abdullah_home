@@ -3,9 +3,10 @@
 maximize = true
 copy-on-select = true
 window-theme = dark
-background-opacity = 0.92
+background-opacity = 0.95
 theme = Gruvbox Material Dark
 font-family = CaskaydiaCove Nerd Font
+cursor-style = bar
 
 keybind = alt+j=goto_split:down
 keybind = alt+k=goto_split:up
