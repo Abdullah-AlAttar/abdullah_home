@@ -12,6 +12,7 @@
     ./ghostty
     ./fonts
     ./obs
+    ./obsidian
     ./telegram
     ./zed
     ./microsoft-edge
