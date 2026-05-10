@@ -11,6 +11,8 @@
     ./alacrity
     ./ghostty
     ./fonts
+    ./obs
+    ./telegram
     ./zed
     ./microsoft-edge
   ];
