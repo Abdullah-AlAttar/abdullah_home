@@ -16,5 +16,11 @@
     ./telegram
     ./zed
     ./microsoft-edge
+    ./remmina
   ];
+
+  home.packages = with pkgs; [
+    process-compose
+  ];
+    
 }
