@@ -11,14 +11,25 @@ in
 {
   config = lib.mkMerge [
     (lib.mkIf (config.programs.system-specific.enableGuiApps && hasZedEditor) {
-      home.packages = [ pkgs."zed-editor" ];
-
-      home.file.".config/zed/settings.json" = {
-        source = ./settings.json;
-      };
-
-      home.file.".config/zed/keymap.json" = {
-        source = ./keymap.json;
+      programs.zed-editor = {
+        enable = true;
+        extensions = [
+          "bluloco-theme"
+          "catppuccin-icons"
+          "comment"
+          "dbml"
+          "git-firefly"
+          "golangci-lint"
+          "gruvbox-material"
+          "html"
+          "jsonnet"
+          "kanagawa-themes"
+          "log"
+          "proto"
+          "sql"
+          "typespec"
+          "vscode-icons"
+        ];
       };
     })
     {
