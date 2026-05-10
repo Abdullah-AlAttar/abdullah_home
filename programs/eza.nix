@@ -25,6 +25,8 @@
     # Default 'ls' (eza) and 'la' (eza -a) from eza module are likely fine.
     # Default 'lt' (eza --tree) from eza module.
 
+    ls = "eza --grid"; # Default ls alias to eza
+    la = "eza -a"; # Default la alias to eza with -a
     # Custom 'll' alias
     ll = "eza -l -a --header --group"; # -l for long, -a for all, plus header and group
 

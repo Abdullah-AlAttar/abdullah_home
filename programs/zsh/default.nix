@@ -79,7 +79,7 @@
       cd = "z"; # Change directory using zsh's z plugin
       k = "kubectl"; # Alias for kubectl
       kc = "kubecolor"; # Alias for kubecolor
-      cat = "${pkgs.bat}/bin/bat --paging=never"; # Use bat as a replacement for cat
+      # cat = "${pkgs.bat}/bin/bat --paging=never"; # Use bat as a replacement for cat
     };
 
     initContent = (builtins.readFile ./zshInitContent.sh);
