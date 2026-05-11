@@ -18,6 +18,7 @@
     ./microsoft-edge
     ./remmina
     ./vlc
+    ./teams
   ];
 
   home.packages = with pkgs; [
