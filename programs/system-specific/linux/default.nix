@@ -17,6 +17,7 @@
     ./zed
     ./microsoft-edge
     ./remmina
+    ./vlc
   ];
 
   home.packages = with pkgs; [
