@@ -19,6 +19,7 @@
     ./remmina
     ./vlc
     ./teams
+    ./discord
   ];
 
   home.packages = with pkgs; [

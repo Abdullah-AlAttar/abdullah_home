@@ -92,7 +92,7 @@
     hugo
     openfortivpn
     qpdf
-    asciinema_3
+    asciinema
     ocrmypdf
 
     devenv
