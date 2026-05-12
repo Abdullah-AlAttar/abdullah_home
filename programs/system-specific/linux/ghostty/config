@@ -6,7 +6,9 @@ window-theme = dark
 background-opacity = 0.95
 theme = Gruvbox Material Dark
 font-family = CaskaydiaCove Nerd Font
-cursor-style = bar
+cursor-style = block
+shell-integration-features = no-cursor
+
 
 keybind = alt+j=goto_split:down
 keybind = alt+k=goto_split:up
