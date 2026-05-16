@@ -104,12 +104,10 @@
     mkvtoolnix-cli
     imagemagick
     potrace
+    ffmpeg
   ];
 
-  home.sessionVariables = {
-    SSH_ASKPASS = "";
-    SSH_ASKPASS_REQUIRE = "never";
-  };
+
 
   home.sessionPath = [
     "$HOME/.npm-global/bin"
