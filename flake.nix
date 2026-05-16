@@ -25,39 +25,36 @@
     };
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-      ...
-    }@inputs:
-    let
-      # Replace <username> with your actual Linux username
-      username = "ab_dullah";
-      # Set your target system architecture
-      system = "x86_64-linux"; # Or "aarch64-linux", etc.
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  } @ inputs: let
+    # Replace <username> with your actual Linux username
+    username = "ab_dullah";
+    # Set your target system architecture
+    system = "x86_64-linux"; # Or "aarch64-linux", etc.
 
-      # Helper to access nixpkgs for the specified system
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
-    {
-      # Define the Home Manager configuration output
-      homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+    # Helper to access nixpkgs for the specified system
+    pkgs = nixpkgs.legacyPackages.${system};
+  in {
+    # Define the Home Manager configuration output
+    homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
 
-        # Modules to import: your main configuration file (home.nix)
-        modules = [
-          ./home.nix
-          # You can add more modules here later if you split your config
-        ];
+      # Modules to import: your main configuration file (home.nix)
+      modules = [
+        ./home.nix
+        # You can add more modules here later if you split your config
+      ];
 
-        # Optional: Extra arguments passed to your modules
-        extraSpecialArgs = {
-          inherit username;
-          inherit inputs;
-          isNixOS = false;
-        };
+      # Optional: Extra arguments passed to your modules
+      extraSpecialArgs = {
+        inherit username;
+        inherit inputs;
+        isNixOS = false;
       };
     };
+  };
 }

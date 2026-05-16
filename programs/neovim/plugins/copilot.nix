@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.nixvim = {
     plugins = {
       # Use copilot.lua for GitHub Copilot integration

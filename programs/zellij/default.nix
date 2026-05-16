@@ -1,6 +1,4 @@
-{ lib, ... }:
-
-{
+{lib, ...}: {
   programs.zellij = {
     enable = true;
     enableZshIntegration = false;
@@ -17,5 +15,4 @@
       }
     '';
   };
-
 }

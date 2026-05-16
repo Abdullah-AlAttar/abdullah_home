@@ -5,9 +5,7 @@
   lib,
   username,
   ...
-}:
-
-{
+}: {
   # Allow unfree packages (required for GitHub Copilot)
   nixpkgs.config.allowUnfree = true;
   imports = [
@@ -29,5 +27,4 @@
   programs.home-manager.enable = true;
   # This is required for using Home Manager with non-NixOS Linux distributions (like WSL)
   targets.genericLinux.enable = true;
-
 }

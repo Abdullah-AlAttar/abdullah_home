@@ -97,7 +97,6 @@
       # Add any other groups you want to make transparent
       # For example, for Telescope or other plugins, you might need to add:
       # TelescopeNormal = { bg = "NONE"; ctermbg = "NONE"; };
-
     };
   };
 }

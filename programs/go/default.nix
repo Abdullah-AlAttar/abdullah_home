@@ -3,9 +3,7 @@
   lib,
   pkgs,
   ...
-}:
-
-{
+}: {
   programs.go = {
     enable = true;
     package = pkgs.go;
@@ -28,5 +26,5 @@
   ];
 
   # Just in case you manually 'go install' something else later
-  home.sessionPath = [ "$HOME/go/bin" ];
+  home.sessionPath = ["$HOME/go/bin"];
 }

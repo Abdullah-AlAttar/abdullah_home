@@ -3,10 +3,7 @@
   lib,
   pkgs,
   ...
-}:
-
-{
-
+}: {
   programs.eza = {
     enable = true;
     enableZshIntegration = true; # Enables default eza aliases for Zsh

@@ -3,13 +3,9 @@
   pkgs,
   lib,
   ...
-}:
-
-let
+}: let
   hasTeams = builtins.hasAttr "teams-for-linux" pkgs;
-
-in
-{
+in {
   config = {
     home.packages = lib.mkIf (config.programs.system-specific.enableGuiApps && hasTeams) [
       pkgs.teams-for-linux
@@ -17,6 +13,6 @@ in
 
     warnings =
       lib.optional (config.programs.system-specific.enableGuiApps && !hasTeams)
-        "programs.system-specific.teams: teams-for-linux is not available for this platform; skipping installation.";
+      "programs.system-specific.teams: teams-for-linux is not available for this platform; skipping installation.";
   };
 }

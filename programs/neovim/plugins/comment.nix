@@ -1,10 +1,8 @@
-{ ... }:
-
-{
+{...}: {
   programs.nixvim = {
     plugins.comment = {
       enable = true;
-      settings = { };
+      settings = {};
     };
 
     # Map both <C-/> (Linux native) and <C-_> (Windows WSL)

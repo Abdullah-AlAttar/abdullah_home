@@ -3,13 +3,9 @@
   pkgs,
   lib,
   ...
-}:
-
-let
+}: let
   hasDiscord = builtins.hasAttr "discord" pkgs;
-
-in
-{
+in {
   config = {
     home.packages = lib.mkIf (config.programs.system-specific.enableGuiApps && hasDiscord) [
       pkgs.discord
@@ -17,6 +13,6 @@ in
 
     warnings =
       lib.optional (config.programs.system-specific.enableGuiApps && !hasDiscord)
-        "programs.system-specific.discord: discord is not available for this platform; skipping installation.";
+      "programs.system-specific.discord: discord is not available for this platform; skipping installation.";
   };
 }

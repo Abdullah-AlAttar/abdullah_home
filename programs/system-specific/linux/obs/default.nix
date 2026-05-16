@@ -3,12 +3,9 @@
   pkgs,
   lib,
   ...
-}:
-
-let
+}: let
   hasObsStudio = builtins.hasAttr "obs-studio" pkgs;
-in
-{
+in {
   config = {
     home.packages = lib.mkIf (config.programs.system-specific.enableGuiApps && hasObsStudio) [
       pkgs.obs-studio
@@ -16,6 +13,6 @@ in
 
     warnings =
       lib.optional (config.programs.system-specific.enableGuiApps && !hasObsStudio)
-        "programs.system-specific.obs: obs-studio is not available for this platform; skipping installation.";
+      "programs.system-specific.obs: obs-studio is not available for this platform; skipping installation.";
   };
 }

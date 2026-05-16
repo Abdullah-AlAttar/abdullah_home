@@ -37,6 +37,7 @@
     yq-go # YAML processor
     jq # JSON processor
     nixfmt # Nix formatter
+    alejandra # Nix formatter
     nil # Nix linter
     nixd # Nix daemon
     unzip # Unzip files
@@ -106,8 +107,6 @@
     potrace
     ffmpeg
   ];
-
-
 
   home.sessionPath = [
     "$HOME/.npm-global/bin"

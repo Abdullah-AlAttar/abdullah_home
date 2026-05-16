@@ -1,9 +1,4 @@
-{
-  pkgs,
-  ...
-}:
-
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     kubectl
     kubectx
@@ -24,5 +19,4 @@
   programs.zsh.initContent = ''
     source <(kubectl completion zsh)
   '';
-
 }

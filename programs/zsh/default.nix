@@ -3,9 +3,7 @@
   pkgs,
   lib,
   ...
-}:
-
-{
+}: {
   programs.zsh = {
     enable = true;
 
@@ -18,11 +16,11 @@
     plugins = [
       # Vi keybindings
       /*
-        {
-             name = "zsh-vi-mode";
-             file = "./share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
-             src = pkgs.zsh-vi-mode;
-            }
+      {
+           name = "zsh-vi-mode";
+           file = "./share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+           src = pkgs.zsh-vi-mode;
+          }
       */
     ];
     oh-my-zsh = {
@@ -67,7 +65,10 @@
       ln = "ln -v"; # Create symbolic links with verbose output
       mkdir = "mkdir -vp"; # Create directories with verbose output
       mv = "mv -iv"; # Move files interactively
-      rm = if pkgs.stdenv.targetPlatform.isDarwin then "rm -v" else "rm -Iv"; # Remove files interactively or with verbose output
+      rm =
+        if pkgs.stdenv.targetPlatform.isDarwin
+        then "rm -v"
+        else "rm -Iv"; # Remove files interactively or with verbose output
       dh = "du -h"; # Disk usage in human-readable format
       df = "df -h"; # Disk free in human-readable format
       su = "sudo -E su -m"; # Switch user with environment preservation
@@ -82,7 +83,6 @@
       # cat = "${pkgs.bat}/bin/bat --paging=never"; # Use bat as a replacement for cat
     };
 
-    initContent = (builtins.readFile ./zshInitContent.sh);
-
+    initContent = builtins.readFile ./zshInitContent.sh;
   };
 }

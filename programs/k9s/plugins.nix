@@ -3,7 +3,7 @@
     shortCut = "Ctrl-Y";
     confirm = false;
     description = "Logs <Stern>";
-    scopes = [ "pods" ];
+    scopes = ["pods"];
     command = "stern";
     background = false;
     args = [
@@ -41,7 +41,7 @@
     shortCut = "Shift-L";
     confirm = false;
     description = "humanlog";
-    scopes = [ "containers" ];
+    scopes = ["containers"];
     command = "sh";
     background = false;
     args = [
@@ -49,5 +49,4 @@
       "kubectl logs --follow -n $NAMESPACE $POD -c $NAME | humanlog"
     ];
   };
-
 }

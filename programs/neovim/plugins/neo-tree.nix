@@ -23,8 +23,8 @@
           auto_expand_width = false;
           mappings = {
             "<CR>" = "open";
-            "s" = "open_split";    # horizontal split
-            "v" = "open_vsplit";   # vertical split
+            "s" = "open_split"; # horizontal split
+            "v" = "open_vsplit"; # vertical split
             # tab open mapping removed (action not supported by installed neo-tree)
           };
         };

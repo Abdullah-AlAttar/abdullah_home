@@ -4,9 +4,7 @@
   pkgs,
   lib,
   ...
-}:
-
-{
+}: {
   imports = [
     ./alacrity
     ./ghostty
@@ -25,5 +23,4 @@
   home.packages = with pkgs; [
     process-compose
   ];
-    
 }

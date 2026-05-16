@@ -3,17 +3,14 @@
   pkgs,
   lib,
   ...
-}:
-
-let
+}: let
   hasGhostty = builtins.hasAttr "ghostty" pkgs;
-in
-{
+in {
   config = lib.mkMerge [
     (lib.mkIf (config.programs.system-specific.enableGuiApps && hasGhostty) {
       home.sessionVariables.TERMINAL = "ghostty";
 
-      home.packages = [ pkgs.ghostty ];
+      home.packages = [pkgs.ghostty];
 
       home.file.".config/ghostty/config" = {
         source = ./config;
@@ -27,7 +24,7 @@ in
     {
       warnings =
         lib.optional (config.programs.system-specific.enableGuiApps && !hasGhostty)
-          "programs.system-specific: ghostty is not available for this platform; skipping installation.";
+        "programs.system-specific: ghostty is not available for this platform; skipping installation.";
     }
   ];
 }

@@ -5,9 +5,7 @@
   lib,
   isNixOS ? false,
   ...
-}:
-
-let
+}: let
   # Check if running in WSL by looking for WSL-specific environment
   isWSL = builtins.pathExists /proc/sys/fs/binfmt_misc/WSLInterop || builtins.pathExists /run/WSL;
 
@@ -16,8 +14,7 @@ let
 
   # GUI apps should be managed only in NixOS environments on native Linux.
   enableGuiApps = isNixOS && enableNativeLinux;
-in
-{
+in {
   imports = [
     ./linux
   ];

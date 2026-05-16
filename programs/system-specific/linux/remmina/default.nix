@@ -3,13 +3,9 @@
   pkgs,
   lib,
   ...
-}:
-
-let
+}: let
   hasRemmina = builtins.hasAttr "remmina" pkgs;
-
-in
-{
+in {
   config = {
     home.packages = lib.mkIf (config.programs.system-specific.enableGuiApps && hasRemmina) [
       pkgs.remmina
@@ -17,6 +13,6 @@ in
 
     warnings =
       lib.optional (config.programs.system-specific.enableGuiApps && !hasRemmina)
-        "programs.system-specific.remmina: remmina is not available for this platform; skipping installation.";
+      "programs.system-specific.remmina: remmina is not available for this platform; skipping installation.";
   };
 }

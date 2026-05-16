@@ -13,7 +13,6 @@
           fullScreen = false;
         };
       };
-
     };
 
     views = import ./views.nix;
