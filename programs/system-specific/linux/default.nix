@@ -18,6 +18,7 @@
     ./vlc
     ./teams
     ./discord
+    ./bruno
   ];
 
   home.packages = with pkgs; [
